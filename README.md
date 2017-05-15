@@ -56,4 +56,4 @@ CloneInstagram is a web application inspired by Instagram built using Ruby on Ra
 ### Bonus Features (TBD)
 
 - [ ] Geotags
-- [ ] Search for users/photos by Geotags
+- [ ] Search for photos by Geotags
