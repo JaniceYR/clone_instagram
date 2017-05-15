@@ -20,7 +20,7 @@ CloneInstagram is a web application inspired by Instagram built using Ruby on Ra
 ## Design Docs
 
 * [View Wireframes](https://github.com/JaniceYR/clone_instagram/tree/master/docs/wireframes)
-* [React Components]()
+* [React Components](https://github.com/JaniceYR/clone_instagram/blob/master/docs/component-hierarchy.md)
 * [API endpoints]()
 * [DB schema]()
 * [Sample State]()
