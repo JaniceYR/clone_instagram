@@ -5,57 +5,54 @@
 
 ## Minimum Viable Product
 
-InstaPups is a web application inspired by Instagram for people to post photos of their puppies and check out friends and other people's photos. It is built with
-Ruby on Rails and React/Redux and will contain the following features:
+CloneInstagram is a web application inspired by Instagram built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
+- [ ] New account creation, login, and guest/demo login
+- [ ] Production README, replacing this README
 - [ ] Hosting on Heroku
-- [ ] Creating a new account, login, demo login
-- [ ] User profile and image posts
-- [ ] Image likes
-- [ ] Image comments
-- [ ] Photo feed and follows
-- [ ] Infinite scroll
-- [ ] Production README [sample]()
+- [ ] Images
+- [ ] Likes
+- [ ] Commenting on images
+- [ ] Following & Photo feed
+
 
 ## Design Docs
 
-* [View Wireframes](https://github.com/liumaggie/instagram/tree/master/docs/wireframes)
-* [React Components](https://github.com/liumaggie/instagram/tree/master/docs/component-hierarchy.md)
-* [API endpoints](https://github.com/liumaggie/instagram/tree/master/docs/api-endpoints.md)
-* [DB schema](https://github.com/liumaggie/instagram/tree/master/docs/schema.md)
-* [Sample State](https://github.com/liumaggie/instagram/tree/master/docs/sample-state.md)
+* [View Wireframes]()
+* [React Components]()
+* [API endpoints]()
+* [DB schema]()
+* [Sample State]()
+
 
 ## Implementation Timeline
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-**Objective:** Create a functioning rails project with front-end authentication.
+**Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Images Model, API, and components (2 days)
+### Phase 2: Images (3 days)
 
-**Objective:** Images can be created and destroyed through the API. Display images on the home page/user profile.
+**Objective:** Images can be created, read and destroyed through the API. Users can read Images on their profile page.
 
-### Phase 3: Likes (1 day)
+### Phase 3: Likes (1 days)
 
-**Objective:** Likes can be created (liked) and destroyed (un-liked) with a count of likes shown on each image.
+**Objective:** Likes on Image can be created(liked), destroyed(unliked) by Users.
 
-### Phase 4: Comments (1 day)
+### Phase 4: Commenting on images (1 day)
 
-**Objective:** Comments can be created and destroyed with all comments shown on each image.
+**Objective:** Comments on Image can be created, destroyed by Users.
 
-### Phase 5: Followers/Following (1/2 day)
+### Phase 5: Following (1 days)
 
-**Objective:** Users can follow other users and show followers and following users' count on user profile.
+**Objective:** Following can be created(follow), destroyed(unfollow) by Users.
 
-### Phase 6: Photo Feed and Infinite Scroll (1 day)
+### Phase 6: Photo feed (2 days)
 
-**Objective:** Display following users' photos with infinite scroll on the home page.
+**Objective:** Photo feed displays photos of followed users.
 
-### Bonus Features:
 
-- [ ] Photo upload
-- [ ] Direct messaging
-- [ ] Hashtags
-- [ ] Search for users/photos by hashtags
-- [ ] Notifications
-- [ ] Discover other users
+### Bonus Features (TBD)
+
+- [ ] Geotags
+- [ ] Search for users/photos by Geotags
