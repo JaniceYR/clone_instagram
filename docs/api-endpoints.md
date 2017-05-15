@@ -11,12 +11,8 @@
 **Users**
 
 - `GET /api/users`
-- `GET /api/user/:username`
+- `GET /api/user/:id`
 - `POST /api/users`
-- `GET /api/user/:id/photos`
-- `GET /api/user/:id/follows`
-- `POST /api/user/:id/follows`
-- `GET /api/user/:id/followers`
 
 **Session**
 
@@ -27,21 +23,27 @@
 
 - `GET /api/photos`
 - `GET /api/photo/:id`
-- `GET /api/photo/:id/comments`
-- `POST /api/user/:id/photos`
 - `PATCH /api/photo/:id`
-- `POST /api/photo/:id/likes`
+
+- `GET /api/user/:id/photos`
+- `POST /api/user/:id/photos`
 
 **Comments**
 
-- `POST /api/photo/:id/comments`
 - `PATCH /api/comment/:id`
 - `DELETE /api/comment/:id`
 
+- `GET /api/photo/:id/comments`
+- `POST /api/photo/:id/comments`
+
 **Likes**
 
+- `POST /api/photo/:id/likes`
 - `DELETE /api/like/:id`
 
 **Followings**
 
+- `GET /api/user/:id/follows`
+- `GET /api/user/:id/followers`
+- `POST /api/user/:id/follows`
 - `DELETE /api/follow/:id`

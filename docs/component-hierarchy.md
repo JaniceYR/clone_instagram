@@ -34,7 +34,7 @@
 | "/signup" | "AuthFormContainer" |
 | "/signin" | "AuthFormContainer" |
 | "/feed" | "NavigationComponent" |
-| "/feed" | "PhotoFeedContainert" |
+| "/feed" | "PhotoFeedContainer" |
 | "/profile/:userId" | "UserProfileContainer" |
 | "/profile/:userId" | "PhotoItemContainer" |
 | "/profile/:userId/photos/:photoId" | "PhotoDetailContainer" |
