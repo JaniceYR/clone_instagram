@@ -43,6 +43,6 @@
 
 - `DELETE /api/like/:id`
 
-**Follows**
+**Followings**
 
 - `DELETE /api/follow/:id`
