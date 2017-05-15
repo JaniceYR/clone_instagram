@@ -34,7 +34,7 @@ CloneInstagram is a web application inspired by Instagram built using Ruby on Ra
 
 ### Phase 2: Images (3 days)
 
-**Objective:** Images can be created, read and destroyed through the API. Users can read Images on their profile page.
+**Objective:** Images can be created and read through the API. Users can read Images on their profile page.
 
 ### Phase 3: Likes (1 days)
 

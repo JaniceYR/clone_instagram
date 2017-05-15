@@ -30,7 +30,6 @@
 - `GET /api/photo/:id/comments`
 - `POST /api/user/:id/photos`
 - `PATCH /api/photo/:id`
-- `DELETE /api/photo/:id`
 - `POST /api/photo/:id/likes`
 
 **Comments**
