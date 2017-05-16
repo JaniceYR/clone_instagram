@@ -1,6 +1,25 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session_phone_background {
+  align-self: center;
+  width:454px;
+  height: 618px;
+  background-size: 100%;
+  background-image: image-url('main_phone_frame.png');
+  background-repeat: no-repeat;
+  margin: 0 10px;
+}
+
+.session_frame {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+
 .logo {
   align-self: center;
   width:250px;
@@ -11,12 +30,38 @@
   margin: 0 10px;
 }
 
-.session_phone_background {
-  align-self: center;
-  width:400px;
-  height: 600px;
-  background-size: 100%;
-  background-image: image-url('main_phone_frame.png');
-  background-repeat: no-repeat;
-  margin: 0 10px;
+.session_submit_button {
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.session_input {
+  background: 0 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #262626;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.link_text {
+  text-decoration: none;
+  color: #3897f0;
 }

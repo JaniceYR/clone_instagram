@@ -40,13 +40,13 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <div>
-          Don't have an account? <Link to="/signup">Sign up</Link>
+          Don't have an account? <Link to="/signup" className="link_text">Sign up</Link>
         </div>
       );
     } else {
       return (
         <div>
-          Have an account? <Link to="/login">Log in</Link>
+          Have an account? <Link to="/login" className="link_text">Log in</Link>
         </div>
       );
     }
@@ -55,11 +55,11 @@ class SessionForm extends React.Component {
   navSubmitButton() {
     if (this.props.formType === 'login') {
       return (
-        <input type="submit" value="Log in" />
+        <input type="submit" value="Log in" className="session_submit_button"/>
       );
     } else {
       return (
-        <input type="submit" value="Sign up" />
+        <input type="submit" value="Sign up" className="session_submit_button"/>
       );
     }
   }
@@ -84,6 +84,7 @@ class SessionForm extends React.Component {
             value={this.state.username}
             onChange={this.update('username')}
             placeholder="Username"
+            className="session_input"
             />
         </label>
         <br/>
@@ -92,6 +93,7 @@ class SessionForm extends React.Component {
             value={this.state.password}
             onChange={this.update('password')}
             placeholder="Password"
+            className="session_input"
             />
         </label>
         <br/>
@@ -107,6 +109,7 @@ class SessionForm extends React.Component {
             value={this.state.name}
             onChange={this.update('name')}
             placeholder="Full Name"
+            className="session_input"
           />
         </label>
         <br/>
@@ -115,6 +118,7 @@ class SessionForm extends React.Component {
             value={this.state.username}
             onChange={this.update('username')}
             placeholder="Username"
+            className="session_input"
           />
         </label>
         <br/>
@@ -123,6 +127,7 @@ class SessionForm extends React.Component {
             value={this.state.password}
             onChange={this.update('password')}
             placeholder="Password"
+            className="session_input"
           />
         </label>
         <br/>
@@ -139,17 +144,16 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
       return (
         <div>
           <figure className="session_phone_background"></figure>
-          <figure className="logo"></figure>
 
           <br/>
           {this.renderErrors()}
 
-          <div>
-            <button onClick={this.demoIdLogIn}>Demo ID Log In</button>
+          <div className="session_frame">
+            <figure className="logo"></figure>
+            <button onClick={this.demoIdLogIn} className="session_submit_button">Demo ID Log In</button>
             <br/>
             OR
 
@@ -165,55 +169,6 @@ class SessionForm extends React.Component {
           </div>
         </div>
       );
-  //   } else {
-  //     return (
-  //       <div>
-  //         <figure className="session_phone_background"></figure>
-  //         <figure className="logo"></figure>
-  //         <form onSubmit={this.handleSubmit} >
-  //           <br/>
-  //
-  //           {this.renderErrors()}
-  //           <div>
-  //             <button>Demo ID Log In</button>
-  //             <br/>
-  //             OR
-  //             <br/>
-  //             <label>
-  //               <input type="text"
-  //                 value={this.state.name}
-  //                 onChange={this.update('name')}
-  //                 placeholder="Full Name"
-  //               />
-  //             </label>
-  //             <br/>
-  //             <label>
-  //               <input type="text"
-  //                 value={this.state.username}
-  //                 onChange={this.update('username')}
-  //                 placeholder="Username"
-  //               />
-  //             </label>
-  //             <br/>
-  //             <label>
-  //               <input type="password"
-  //                 value={this.state.password}
-  //                 onChange={this.update('password')}
-  //                 placeholder="Password"
-  //               />
-  //             </label>
-  //             <br/>
-  //             {this.navSubmitButton()}
-  //             <br/>
-  //
-  //           </div>
-  //         </form>
-  //           <div>
-  //             {this.navLink()}
-  //           </div>
-  //       </div>
-  //     );
-  //   }
   }
 }
 
