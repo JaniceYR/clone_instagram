@@ -32,9 +32,17 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
+      return (
+        <div>
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </div>
+      );
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return (
+        <div>
+          Have an account? <Link to="/login">Log in</Link>
+        </div>
+      );
     }
   }
 
@@ -51,36 +59,63 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
-          <div className="login-form">
+    if (this.props.formType === 'login'){
+      return (
+        <div>
+          <h1>Login page</h1>
+          <figure className="logo"></figure>
+          <form onSubmit={this.handleSubmit} >
             <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
-      </div>
-    );
+
+            {this.renderErrors()}
+            <div>
+              <br/>
+              <label>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('name')}
+                  placeholder="Full Name"
+                />
+              </label>
+              <br/>
+              <label>
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  placeholder="Username"
+                />
+              </label>
+              <br/>
+              <label>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+              </label>
+              <br/>
+              <input type="submit" value="Log in" />
+              <br/>
+              OR
+              <br/>
+            <button>Demo ID Log In</button>
+            </div>
+          </form>
+
+            <div>
+              {this.navLink()}
+            </div>
+
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Signup page</h1>
+        </div>
+      );
+
+    }
   }
 }
 
