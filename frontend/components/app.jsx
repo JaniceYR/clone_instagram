@@ -4,6 +4,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 import SessionFormContainer from './session/session_form_container';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>

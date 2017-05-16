@@ -39,13 +39,13 @@ class SessionForm extends React.Component {
   navLink() {
     if (this.props.formType === 'login') {
       return (
-        <div>
+        <div className="nav-link">
           Don't have an account? <Link to="/signup" className="link_text">Sign up</Link>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="nav-link">
           Have an account? <Link to="/login" className="link_text">Log in</Link>
         </div>
       );
@@ -145,27 +145,34 @@ class SessionForm extends React.Component {
 
   render() {
       return (
-        <div>
+        <div className="session_frame">
           <figure className="session_phone_background"></figure>
 
           <br/>
           {this.renderErrors()}
+          <div className="session_input_frame_parant">
+            <div className="session_input_frame">
+              <figure className="logo"></figure>
+              <button onClick={this.demoIdLogIn} className="session_submit_button">Demo ID Log In</button>
+              <br/>
 
-          <div className="session_frame">
-            <figure className="logo"></figure>
-            <button onClick={this.demoIdLogIn} className="session_submit_button">Demo ID Log In</button>
-            <br/>
-            OR
+              <div className="session_separator">
+                <div className="separator-line"></div>
+                <div className="separator-text"> OR </div>
+                <div className="separator-line"></div>
+              </div>
+              <br/>
 
-            <form onSubmit={this.handleSubmit} >
-            {this.inputInformation()}
-            {this.navSubmitButton()}
-            <br/>
-            </form>
-          </div>
+              <form onSubmit={this.handleSubmit} >
+              {this.inputInformation()}
+              {this.navSubmitButton()}
+              <br/>
+              </form>
+            </div>
 
-          <div>
-            {this.navLink()}
+            <div className="session_input_frame">
+              {this.navLink()}
+            </div>
           </div>
         </div>
       );

@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
- @import "colors";
+@import "colors.scss";
 
 body {
-  background-color: $backgrount-gray;
+  background-color: $background-gray;
 }
