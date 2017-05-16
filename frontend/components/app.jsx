@@ -10,10 +10,10 @@ const App = () => (
       <Link to="/">
         <h1>App main page</h1>
       </Link>
-    <Switch>
+
       <Route path="/login" component={SessionFormContainer} />
       <Route path="/signup" component={SessionFormContainer} />
-    </Switch>
+
   </div>
 );
 

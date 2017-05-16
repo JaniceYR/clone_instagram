@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       name: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoIdLogIn = this.demoIdLogIn.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -22,6 +23,11 @@ class SessionForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  demoIdLogIn(e) {
+    e.preventDefault();
+    this.props.demoLogin();
   }
 
   handleSubmit(e) {
@@ -70,95 +76,144 @@ class SessionForm extends React.Component {
     );
   }
 
-  render() {
-    if (this.props.formType === 'login'){
-      return (
-        <div>
-          <figure className="session_phone_background"></figure>
-          <figure className="logo"></figure>
-          <form onSubmit={this.handleSubmit} >
-            <br/>
+  inputLogin() {
+    return (
+      <div>
+        <label>
+          <input type="text"
+            value={this.state.username}
+            onChange={this.update('username')}
+            placeholder="Username"
+            />
+        </label>
+        <br/>
+        <label>
+          <input type="password"
+            value={this.state.password}
+            onChange={this.update('password')}
+            placeholder="Password"
+            />
+        </label>
+        <br/>
+      </div>
+    );
+  }
 
-            {this.renderErrors()}
-            <div>
-              <button>Demo ID Log In</button>
-              <br/>
-              OR
-              <br/>
-              <label>
-                <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  placeholder="Username"
-                />
-              </label>
-              <br/>
-              <label>
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  placeholder="Password"
-                />
-              </label>
-              <br/>
-              {this.navSubmitButton()}
-              <br/>
-            </div>
-          </form>
-            <div>
-              {this.navLink()}
-            </div>
-        </div>
-      );
+  inputSignup() {
+    return (
+      <div>
+        <label>
+          <input type="text"
+            value={this.state.name}
+            onChange={this.update('name')}
+            placeholder="Full Name"
+          />
+        </label>
+        <br/>
+        <label>
+          <input type="text"
+            value={this.state.username}
+            onChange={this.update('username')}
+            placeholder="Username"
+          />
+        </label>
+        <br/>
+        <label>
+          <input type="password"
+            value={this.state.password}
+            onChange={this.update('password')}
+            placeholder="Password"
+          />
+        </label>
+        <br/>
+      </div>
+    );
+  }
+
+  inputInformation() {
+    if(this.props.formType === 'login') {
+      return this.inputLogin();
     } else {
+      return this.inputSignup();
+    }
+  }
+
+  render() {
+
       return (
         <div>
           <figure className="session_phone_background"></figure>
           <figure className="logo"></figure>
-          <form onSubmit={this.handleSubmit} >
+
+          <br/>
+          {this.renderErrors()}
+
+          <div>
+            <button onClick={this.demoIdLogIn}>Demo ID Log In</button>
             <br/>
+            OR
 
-            {this.renderErrors()}
-            <div>
-              <button>Demo ID Log In</button>
-              <br/>
-              OR
-              <br/>
-              <label>
-                <input type="text"
-                  value={this.state.name}
-                  onChange={this.update('name')}
-                  placeholder="Full Name"
-                />
-              </label>
-              <br/>
-              <label>
-                <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  placeholder="Username"
-                />
-              </label>
-              <br/>
-              <label>
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  placeholder="Password"
-                />
-              </label>
-              <br/>
-              {this.navSubmitButton()}
-              <br/>
+            <form onSubmit={this.handleSubmit} >
+            {this.inputInformation()}
+            {this.navSubmitButton()}
+            <br/>
+            </form>
+          </div>
 
-            </div>
-          </form>
-            <div>
-              {this.navLink()}
-            </div>
+          <div>
+            {this.navLink()}
+          </div>
         </div>
       );
-    }
+  //   } else {
+  //     return (
+  //       <div>
+  //         <figure className="session_phone_background"></figure>
+  //         <figure className="logo"></figure>
+  //         <form onSubmit={this.handleSubmit} >
+  //           <br/>
+  //
+  //           {this.renderErrors()}
+  //           <div>
+  //             <button>Demo ID Log In</button>
+  //             <br/>
+  //             OR
+  //             <br/>
+  //             <label>
+  //               <input type="text"
+  //                 value={this.state.name}
+  //                 onChange={this.update('name')}
+  //                 placeholder="Full Name"
+  //               />
+  //             </label>
+  //             <br/>
+  //             <label>
+  //               <input type="text"
+  //                 value={this.state.username}
+  //                 onChange={this.update('username')}
+  //                 placeholder="Username"
+  //               />
+  //             </label>
+  //             <br/>
+  //             <label>
+  //               <input type="password"
+  //                 value={this.state.password}
+  //                 onChange={this.update('password')}
+  //                 placeholder="Password"
+  //               />
+  //             </label>
+  //             <br/>
+  //             {this.navSubmitButton()}
+  //             <br/>
+  //
+  //           </div>
+  //         </form>
+  //           <div>
+  //             {this.navLink()}
+  //           </div>
+  //       </div>
+  //     );
+  //   }
   }
 }
 
