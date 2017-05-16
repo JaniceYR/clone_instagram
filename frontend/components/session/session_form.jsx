@@ -46,6 +46,18 @@ class SessionForm extends React.Component {
     }
   }
 
+  navSubmitButton() {
+    if (this.props.formType === 'login') {
+      return (
+        <input type="submit" value="Log in" />
+      );
+    } else {
+      return (
+        <input type="submit" value="Sign up" />
+      );
+    }
+  }
+
   renderErrors() {
     return(
       <ul>
@@ -62,17 +74,59 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login'){
       return (
         <div>
-          <h1>Login page</h1>
+          <figure className="session_phone_background"></figure>
           <figure className="logo"></figure>
           <form onSubmit={this.handleSubmit} >
             <br/>
 
             {this.renderErrors()}
             <div>
+              <button>Demo ID Log In</button>
+              <br/>
+              OR
               <br/>
               <label>
                 <input type="text"
                   value={this.state.username}
+                  onChange={this.update('username')}
+                  placeholder="Username"
+                />
+              </label>
+              <br/>
+              <label>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+              </label>
+              <br/>
+              {this.navSubmitButton()}
+              <br/>
+            </div>
+          </form>
+            <div>
+              {this.navLink()}
+            </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <figure className="session_phone_background"></figure>
+          <figure className="logo"></figure>
+          <form onSubmit={this.handleSubmit} >
+            <br/>
+
+            {this.renderErrors()}
+            <div>
+              <button>Demo ID Log In</button>
+              <br/>
+              OR
+              <br/>
+              <label>
+                <input type="text"
+                  value={this.state.name}
                   onChange={this.update('name')}
                   placeholder="Full Name"
                 />
@@ -94,27 +148,16 @@ class SessionForm extends React.Component {
                 />
               </label>
               <br/>
-              <input type="submit" value="Log in" />
+              {this.navSubmitButton()}
               <br/>
-              OR
-              <br/>
-            <button>Demo ID Log In</button>
+
             </div>
           </form>
-
             <div>
               {this.navLink()}
             </div>
-
         </div>
       );
-    } else {
-      return (
-        <div>
-          <h1>Signup page</h1>
-        </div>
-      );
-
     }
   }
 }
