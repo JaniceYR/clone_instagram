@@ -12,7 +12,7 @@ class UserProfile extends React.Component {
     return(
       <div>
         <Navigation />
-        <h1>User Profile Page</h1>
+        <h1>User Profile Page(id: {this.props.currentUser.username})</h1>
       </div>
     );
   }

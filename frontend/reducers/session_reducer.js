@@ -5,22 +5,22 @@ import {
   RECEIVE_ERRORS
 } from '../actions/session_actions';
 
-const nullUser = Object.freeze({
+const noOneLogged = Object.freeze({
   currentUser: null,
   errors: []
 });
 
-const SessionReducer = (state = nullUser, action) => {
+const SessionReducer = (state = noOneLogged, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, nullUser, {
+      return merge({}, noOneLogged, {
         currentUser
       });
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, nullUser, {
+      return merge({}, noOneLogged, {
         errors
       });
     default:
