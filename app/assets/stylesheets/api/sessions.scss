@@ -96,6 +96,7 @@
   display:flex;
   flex-direction: column;
 }
+
 .session_input {
   background: 0 0;
   border: 1px solid $border-gray;
@@ -120,6 +121,13 @@
   font-size: 14px;
   margin: 15px;
   text-align: center;
+}
+
+.error-text {
+  color: #ed4956;
+  text-align: center;
+  list-style: none;
+  margin-top: 10px;
 }
 
 .session_separator {

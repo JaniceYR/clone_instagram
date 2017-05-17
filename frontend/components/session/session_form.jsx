@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className='error-text'>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
             <figure className="session_phone_sample"></figure>
           </div>
         <br/>
-          {this.renderErrors()}
+
           <div className="session_input_frame_parant">
             <div className="session_input_frame">
               <figure className="logo"></figure>
@@ -82,6 +82,7 @@ class SessionForm extends React.Component {
                 <input type="submit" value="Log in" className="session_submit_button"/>
                 <br/>
               </form>
+              {this.renderErrors()}
             </div>
 
             <div className="session_input_frame">
@@ -99,7 +100,7 @@ class SessionForm extends React.Component {
             <figure className="session_phone_sample"></figure>
           </div>
           <br/>
-          {this.renderErrors()}
+
           <div className="session_input_frame_parant">
             <div className="session_input_frame">
               <figure className="logo"></figure>
@@ -130,8 +131,8 @@ class SessionForm extends React.Component {
                   placeholder="Password" className="session_input"
                   />
                 <input type="submit" value="Sign up" className="session_submit_button"/>
-              <br/>
               </form>
+              {this.renderErrors()}
               <div className="signup_terms">
                 By signing up, you agree to our<br/>
                 Terms & Privacy Policy.
