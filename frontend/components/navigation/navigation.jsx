@@ -15,10 +15,12 @@ class Navigation extends React.Component {
   render() {
     return(
       <div className="navigation-frame">
-        <div className="navigation-logo-frame">
-          <figure className="icon-main"></figure>
-          <figure className="logo-navigation"></figure>
-        </div>
+        <Link to="/feed">
+          <div className="navigation-logo-frame">
+            <figure className="icon-main"></figure>
+            <figure className="logo-navigation"></figure>
+          </div>
+        </Link>
         <div className="navigation-icon-frame">
           <figure className="icon-uploadphoto"></figure>
           <Link to="/:userid" title="My Page">
