@@ -52,8 +52,10 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <div className="session_frame">
-          <figure className="session_phone_background"></figure>
-          <br/>
+          <div className="session_phone_background">
+            <figure className="session_phone_sample"></figure>
+          </div>
+        <br/>
           {this.renderErrors()}
           <div className="session_input_frame_parant">
             <div className="session_input_frame">
@@ -93,7 +95,9 @@ class SessionForm extends React.Component {
     } else {
       return (
         <div className="session_frame">
-          <figure className="session_phone_background"></figure>
+          <div className="session_phone_background">
+            <figure className="session_phone_sample"></figure>
+          </div>
           <br/>
           {this.renderErrors()}
           <div className="session_input_frame_parant">

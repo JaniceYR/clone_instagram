@@ -13,7 +13,8 @@
   width: 100%;
 }
 .session_phone_frame {
-
+  width: 460px;
+  display:flex;
 }
 .session_phone_background {
   align-self: center;
@@ -23,7 +24,19 @@
   background-image: image-url('main_phone_frame.png');
   background-repeat: no-repeat;
   margin: 0 10px;
+  position: relative;
 }
+.session_phone_sample {
+  width: 241px;
+  height: 429px;
+  left: 140px;
+  top: 100px;
+  position: relative;
+  background-image: image-url('main_phone_sample.jpg');
+  background-repeat: no-repeat;
+  margin: 0 10px;
+}
+
 
 .session_input_frame_parant {
   display:flex;
