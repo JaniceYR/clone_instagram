@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import Navigation from '../navigation/navigation_container';
+
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
@@ -8,7 +10,10 @@ class UserProfile extends React.Component {
   }
   render() {
     return(
-      <h1>User Profile Page</h1>
+      <div>
+        <Navigation />
+        <h1>User Profile Page</h1>
+      </div>
     );
   }
 }
