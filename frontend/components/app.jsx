@@ -9,10 +9,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
-      <ProtectedRoute path="/" exact component={SessionFormContainer} />
-      <AuthRoute path="/login" component={SessionFormContainer} />
-      <AuthRoute path="/signup" component={SessionFormContainer} />
-      <ProtectedRoute path="/feed" component={FeedContainer} />
+      <Switch>
+        <AuthRoute exact={true} path="/" component={SessionFormContainer} />
+        <AuthRoute exact={true} path="/login" component={SessionFormContainer} />
+        <AuthRoute exact={true} path="/signup" component={SessionFormContainer} />
+        <ProtectedRoute path="/feed" component={FeedContainer} />
+      </Switch>
     </div>
 );
 
