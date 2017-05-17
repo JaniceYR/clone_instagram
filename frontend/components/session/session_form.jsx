@@ -13,6 +13,10 @@ class SessionForm extends React.Component {
     this.demoIdLogIn = this.demoIdLogIn.bind(this);
   }
 
+  componentDidMount() {
+    this.props.resetError();
+  }
+  
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
