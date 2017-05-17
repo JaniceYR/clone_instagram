@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import UserProfile from './user_profile';
+import Feed from './feed';
 
 const mapStateToProps = (state, ownProps) => ({
 });
@@ -12,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserProfile);
+)(Feed);

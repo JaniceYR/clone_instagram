@@ -1,0 +1,73 @@
+@import "colors.scss";
+
+.navigation-frame {
+  border-bottom: 1px solid $border-gray;
+  background-color: $white;
+  width: 100%;
+  height: 77px;
+  max-width: 1010px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation-logo-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30px;
+  flex: 3;
+}
+
+.icon-main {
+  background-image: image-url('icons.png');
+  background-repeat: no-repeat;
+  background-position: -177px 0;
+  height: 35px;
+  width: 60px;
+}
+
+.logo-navigation {
+  margin-bottom: -8px;
+  align-self: center;
+  width:170px;
+  height: 60px;
+  background-size: 100%;
+  background-image: image-url('logo.png');
+  background-repeat: no-repeat;
+}
+
+.navigation-icon-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+  width: 140px;
+}
+
+.icon-uploadphoto {
+  background-size: contain;
+  background-image: image-url('icon_uploadphoto.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 27px;
+}
+
+.icon-user {
+  background-image: image-url('icons.png');
+  background-position: -78px -322px;
+  height: 27px;
+  width: 27px;
+  display: block;
+  overflow: hidden;
+}
+
+.icon-logout {
+  background-size: contain;
+  background-image: image-url('icon_logout.png');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 25px;
+}

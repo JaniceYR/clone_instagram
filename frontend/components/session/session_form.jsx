@@ -59,7 +59,7 @@ class SessionForm extends React.Component {
 
           <div className="session_input_frame_parant">
             <div className="session_input_frame">
-              <figure className="logo"></figure>
+              <figure className="logo-session "></figure>
               <button onClick={this.demoIdLogIn} className="session_submit_button">
                 Demo ID Log In
               </button>
@@ -103,7 +103,7 @@ class SessionForm extends React.Component {
 
           <div className="session_input_frame_parant">
             <div className="session_input_frame">
-              <figure className="logo"></figure>
+              <figure className="logo-session "></figure>
               <div className="signup_comment">
                 Sign up to see photos and<br/>
               videos from your friends.
