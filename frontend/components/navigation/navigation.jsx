@@ -4,8 +4,14 @@ import { Link, withRouter } from 'react-router-dom';
 class Navigation extends React.Component {
   constructor(props){
     super(props);
-
+    this.logout = this.logout.bind(this);
   }
+
+  logout(e) {
+    e.preventDefault();
+    this.props.logout();
+  }
+
   render() {
     return(
       <div className="navigation-frame">
@@ -15,10 +21,10 @@ class Navigation extends React.Component {
         </div>
         <div className="navigation-icon-frame">
           <figure className="icon-uploadphoto"></figure>
-          <Link to="/:userid">
+          <Link to="/:userid" title="My Page">
             <figure className="icon-user"></figure>
           </Link>
-          <figure className="icon-logout"></figure>
+            <figure className="icon-logout" onClick={this.logout} title="Logout"></figure>
         </div>
       </div>
     );
