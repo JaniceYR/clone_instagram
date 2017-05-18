@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { ProtectedRoute } from '../../util/route_util';
 
 import Navigation from '../navigation/navigation_container';
 import UserEditContainer from './user_edit_container';
 
-import { ProtectedRoute } from '../../util/route_util';
 
 class UserProfile extends React.Component {
   constructor(props){
