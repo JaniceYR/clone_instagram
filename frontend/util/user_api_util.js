@@ -8,7 +8,7 @@ export const fetchUser = (userId) => {
 export const updateUser = (user) => {
   return $.ajax({
     method: "PATCH",
-    url: `/api/users/${user.id}`,
+    url: `/api/users/${user.user.id}`,
     data: user
   });
 };
