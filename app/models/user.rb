@@ -10,6 +10,7 @@
 #  profile_pic_url :text
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  name            :string
 #
 
 class User < ApplicationRecord
@@ -21,6 +22,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :posts
+  
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
