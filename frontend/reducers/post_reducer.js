@@ -2,7 +2,11 @@ import { RECEIVE_POST,  REMOVE_POST } from '../actions/post_actions';
 import merge  from 'lodash/merge';
 
 const defaultPost = Object.freeze({
-
+  id: null,
+  user_id: null,
+  photo_url: "",
+  description: "",
+  location: ""
 });
 
 const PostsReducer = (oldState = defaultPost, action) => {
