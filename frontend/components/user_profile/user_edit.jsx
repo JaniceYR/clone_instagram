@@ -6,11 +6,19 @@ import Navigation from '../navigation/navigation_container';
 class UserEdit extends React.Component {
   constructor(props){
     super(props);
-
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
   }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = this.state;
+    this.props.processForm({user});
+  }
+
   render() {
     return(
       <div>
@@ -30,22 +38,24 @@ class UserEdit extends React.Component {
                 </div>
             </div>
             <div>
-              <div>
-                <h1>Name</h1>
-                <input type="text" value={this.props.user.name}></input>
-              </div>
-              <div>
-                <h1>Username</h1>
-                <input type="text" value={this.props.user.username}></input>
-              </div>
-              <div>
-                <h1>Bio</h1>
-                <input type="text" value={this.props.user.bio}></input>
-              </div>
-              <div>
-                <h1> </h1>
-                <input type="submit" value="Submit"></input>
-              </div>
+              <form onSubmit={this.handleSubmit}>
+                <div>
+                  <h1>Name</h1>
+                  <input type="text" value={this.props.user.name}></input>
+                </div>
+                <div>
+                  <h1>Username</h1>
+                  <input type="text" value={this.props.user.username}></input>
+                </div>
+                <div>
+                  <h1>Bio</h1>
+                  <input type="text" value={this.props.user.bio}></input>
+                </div>
+                <div>
+                  <h1> </h1>
+                  <input type="submit" value="Submit"></input>
+                </div>
+              </form>
             </div>
           </div>
         </div>
