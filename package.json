@@ -35,11 +35,13 @@
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-dropzone": "^3.13.1",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-router": "^2.1.2",
     "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   }

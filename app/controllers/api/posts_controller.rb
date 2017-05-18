@@ -1,5 +1,10 @@
 class Api::PostsController < ApplicationController
 
+  def index
+    @posts = Post.all
+    render "/api/posts"
+  end
+
   def show
     @post = Post.find(params[:id])
     if @post
@@ -9,7 +14,6 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @photo.user_id = current_user.id
     if @post.save
       render "api/posts/show"
     else

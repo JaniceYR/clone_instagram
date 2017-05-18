@@ -7,6 +7,7 @@ import SessionFormContainer from './session/session_form_container';
 import FeedContainer from './feed/feed_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import UserEditContainer from './user_profile/user_edit_container';
+import PostUploadContainer from './post/post_upload_container';
 
 const App = () => (
     <div>
@@ -16,8 +17,9 @@ const App = () => (
         <AuthRoute exact={true} path="/signup" component={SessionFormContainer} />
         <ProtectedRoute path="/feed" component={FeedContainer} />
         <ProtectedRoute path="/:userId/edit" component={UserEditContainer} />
+        <ProtectedRoute exact={true} path="/:userId/post_upload" component={PostUploadContainer} />
         <ProtectedRoute path="/:userId" component={UserProfileContainer} />
-      </Switch>
+    </Switch>
     </div>
 );
 

@@ -1,25 +1,19 @@
-import { RECEIVE_POST,  REMOVE_POST } from '../actions/post_actions';
+import { RECEIVE_POST, REMOVE_POST, RECEIVE_POSTS } from '../actions/post_actions';
 import merge  from 'lodash/merge';
 
-const defaultPost = Object.freeze({
-  id: null,
-  user_id: null,
-  photo_url: "",
-  description: "",
-  location: ""
-});
-
-const PostsReducer = (oldState = defaultPost, action) => {
-  Object.freeze(oldState);
+const PostsReducer = (state = {}, action) => {
+  Object.freeze(state);
   switch(action.type) {
+    case RECEIVE_POSTS:
+      return Object.merge({}, action.posts);
     case RECEIVE_POST:
-      return Object.merge({}, oldState, { selectedPost: [action.post]});
+      return Object.merge({}, state, { [action.post.id]: action.post });
     case REMOVE_POST:
-      let newState = merge({}, oldState);
+      let newState = merge({}, state);
       delete newState[action.post.id];
       return newState;
     default:
-      return oldState;
+      return state;
   }
 };
 

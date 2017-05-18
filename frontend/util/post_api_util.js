@@ -1,3 +1,10 @@
+export const fetchPosts = () => (
+  $.ajax({
+    method: "GET",
+    url: "/api/posts"
+  })
+);
+
 export const fetchPost = (id) => (
   $.ajax({
     method: "GET",
@@ -5,13 +12,15 @@ export const fetchPost = (id) => (
   })
 );
 
-export const createPost = (post) => (
+export const createPost = (post) => {
+  debugger
+  return (
   $.ajax({
     method: "POST",
     url: "api/posts",
-    data: { post }
-  })
-);
+    data: post
+  }));
+};
 
 export const deletePost = (id) => (
   $.ajax({
