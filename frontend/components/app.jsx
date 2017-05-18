@@ -12,12 +12,12 @@ import PostUploadContainer from './post/post_upload_container';
 const App = () => (
     <div>
       <Switch>
-        <AuthRoute exact={true} path="/" component={SessionFormContainer} />
-        <AuthRoute exact={true} path="/login" component={SessionFormContainer} />
-        <AuthRoute exact={true} path="/signup" component={SessionFormContainer} />
+        <AuthRoute exact path="/" component={SessionFormContainer} />
+        <AuthRoute exact path="/login" component={SessionFormContainer} />
+        <AuthRoute exact path="/signup" component={SessionFormContainer} />
         <ProtectedRoute path="/feed" component={FeedContainer} />
         <ProtectedRoute path="/:userId/edit" component={UserEditContainer} />
-        <ProtectedRoute exact={true} path="/:userId/post_upload" component={PostUploadContainer} />
+        <ProtectedRoute exact path="/:userId/post_upload" component={PostUploadContainer} />
         <ProtectedRoute path="/:userId" component={UserProfileContainer} />
     </Switch>
     </div>

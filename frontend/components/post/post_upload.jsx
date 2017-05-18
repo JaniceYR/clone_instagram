@@ -55,6 +55,7 @@ class PostUpload extends React.Component {
     const post = this.state;
     post.user_id = this.props.currentUser.id;
     this.props.createPost({post});
+    this.props.history.push("/");
   }
 
   render() {
