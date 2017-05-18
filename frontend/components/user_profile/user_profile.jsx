@@ -8,11 +8,16 @@ class UserProfile extends React.Component {
     super(props);
 
   }
+  componentDidMount() {
+    this.props.fetchUser(this.props.match.params.userId);
+  }
   render() {
     return(
       <div>
         <Navigation />
-        <h1>User Profile Page(id: {this.props.currentUser.username})</h1>
+        <h1>User Profile Page(id: {this.props.user.username})</h1>
+
+
       </div>
     );
   }

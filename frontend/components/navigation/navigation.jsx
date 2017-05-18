@@ -23,7 +23,7 @@ class Navigation extends React.Component {
         </Link>
         <div className="navigation-icon-frame">
           <figure className="icon-uploadphoto"></figure>
-          <Link to={`/${this.props.currentUser.username}`} title="My Page">
+          <Link to={`/${this.props.currentUser.id}`} title="My Page">
             <figure className="icon-user"></figure>
           </Link>
             <figure className="icon-logout" onClick={this.logout} title="Logout"></figure>
