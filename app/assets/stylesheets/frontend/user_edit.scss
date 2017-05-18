@@ -1,0 +1,29 @@
+@import "colors.scss";
+
+.edit-page {
+  width: 100%;
+}
+
+.edit-frame-merge {
+
+  margin: auto;
+  display:flex;
+  width: 80%;
+  flex-direction: row;
+  background-color: $white;
+  border: 1px solid $border-gray;
+}
+.edit-sub-frame-left {
+  border-right: 1px solid $border-gray;
+  background-color: $white;
+  width: 240px;
+  height: 500px;
+}
+.edit-sub-frame-right {
+  flex: 1;
+  height: 500px;
+}
+.user-pic-frame {
+  display:flex;
+  flex-direction: row;
+}
