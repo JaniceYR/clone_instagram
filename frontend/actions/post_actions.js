@@ -24,18 +24,17 @@ export const fetchUserPosts = () => dispatch => (
     .then(posts => dispatch(receiveUserPosts(posts)))
 );
 
-export const fetchPost = (id) => dispatch => (
-  APIUtil.fetchPost(id)
+export const fetchPost = (postId) => dispatch => (
+  APIUtil.fetchPost(postId)
     .then(post => dispatch(receivePost(post)))
 );
 
 export const createPost = (post) => dispatch => (
   APIUtil.createPost(post)
-    .then(post => dispatch(receivePost(post)))
+    .then(newPost => dispatch(receivePost(newPost)))
 );
 
-export const deletePost = (id) => dispatch => (
-  APIUtil
-    .deletePost(id)
+export const deletePost = (postId) => dispatch => (
+  APIUtil.deletePost(postId)
     .then((post) => dispatch(removePost(post)))
 );

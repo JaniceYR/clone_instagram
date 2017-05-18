@@ -1,10 +1,3 @@
-export const fetchStreamPosts = () => (
-  $.ajax({
-    method: "GET",
-    url: "/api/posts"
-  })
-);
-
 export const fetchPost = (id) => (
   $.ajax({
     method: "GET",
