@@ -17,7 +17,7 @@ export const createPost = (post) => {
   return (
   $.ajax({
     method: "POST",
-    url: "api/posts",
+    url: "/api/posts",
     data: post
   }));
 };
@@ -25,6 +25,6 @@ export const createPost = (post) => {
 export const deletePost = (id) => (
   $.ajax({
     method: "DELETE",
-    url: `api/posts/${id}`
+    url: `/api/posts/${id}`
   })
 );
