@@ -3,14 +3,14 @@ class Api::PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     if @post
-      render :show
+      render "/api/posts/show"
     end
   end
 
   def create
     @post = Post.new(post_params)
+    @photo.user_id = current_user.id
     if @post.save
-      login(@post)
       render "api/posts/show"
     else
       render json: @post.errors.full_messages, status: 422
@@ -20,9 +20,10 @@ class Api::PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     if @post
-      render :show
+      @post.destroy
+      render json: @post
     else
-      render json: ['Post is not exist'], status: 422
+      render json: ['Post is not exist'], status: 404
     end
   end
 
