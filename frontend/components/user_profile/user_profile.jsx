@@ -28,17 +28,23 @@ class UserProfile extends React.Component {
               <div className="profile-header-right-1">
                 <h1>{this.props.user.username}</h1>
                 <Link to={`${this.props.user.id}/edit`}>
-                  <button>Edit Profile</button>
+                  <button className="profile-header-right-1-edit-button">Edit Profile</button>
                 </Link>
-                <button>Follow</button>
-                <button>Following</button>
+                <button className="profile-header-right-1-edit-follow">Follow</button>
+                <button className="profile-header-right-1-edit-button">Following</button>
               </div>
-              <div>
-                <h2>{this.props.user.name}</h2>
-                <h2>{this.props.user.bio}</h2>
+              <ul className="profile-header-right-2">
+                <li> <h3>000</h3>posts</li>
+                <li> <h3>000</h3>follows</li>
+                <li> <h3>000</h3>folloing</li>
+              </ul>
+              <div className="profile-header-right-3">
+                <h3>{this.props.user.name}</h3>
+                {this.props.user.bio}
               </div>
             </div>
           </header>
+          <h1>User's post item</h1>
         </article>
       </div>
     );
