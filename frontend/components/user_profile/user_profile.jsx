@@ -45,7 +45,7 @@ class UserProfile extends React.Component {
             </div>
           </header>
           <h1>User's post item</h1>
-          <PostItemContainer />
+          <PostItemContainer postId="1"/>
         </article>
       </div>
     );

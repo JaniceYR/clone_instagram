@@ -7,7 +7,8 @@ const defaultUser = Object.freeze({
   username: "",
   name: "",
   bio: "",
-  profile_pic_url: null  
+  profile_pic_url: null,
+  post: []
 });
 
 const UserReducer = (state = defaultUser, action) => {

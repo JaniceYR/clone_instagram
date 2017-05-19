@@ -11,12 +11,14 @@ class PostItem extends React.Component {
 
   }
   componentDidMount() {
+    this.props.fetchPost(this.props.postId);
   }
 
   render() {
     return(
       <div>
         <h1>PostItem Page</h1>
+        {this.props.post.photo_url}
       </div>
 
     );

@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
-import { createPost } from '../../actions/post_actions';
+import { fetchPost } from '../../actions/post_actions';
 import PostItem from './post_item';
 
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = (state, {postId}) => {
   return {
-
+    postId: postId,
+    post: state.post
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-
+  fetchPost: postId => dispatch(fetchPost(postId))
 });
 
 export default connect(
