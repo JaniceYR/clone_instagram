@@ -43,7 +43,7 @@ class UserEdit extends React.Component {
         <div className="edit-page">
           <div className="edit-frame-merge">
             <div className="edit-sub-frame-left">
-              <div className="edit-title-text">Edit Profile</div>
+              <h1 className="edit-title-text">Edit Profile</h1>
             </div>
             <div className="edit-sub-frame-right">
               <div className="edit-user-username-frame">

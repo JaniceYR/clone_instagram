@@ -21,13 +21,15 @@ class PostUpload extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handlePhotoDrop = this.handlePhotoDrop.bind(this);
+    this.handlePhotoClick = this.handlePhotoClick.bind(this);
   }
 
   handlePhotoDrop(photo) {
-    // this.setState({
-    //   uploadedFile: photo[0]
-    // });
     this.handlePhotoUpload(photo[0]);
+  }
+
+  handlePhotoClick(e) {
+    e.preventDefault();
   }
 
   handlePhotoUpload(photo) {
@@ -60,33 +62,49 @@ class PostUpload extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="upload-page">
         <Navigation />
         <h1> this is post upload component</h1>
         <div>
-          <div>
-            <div>
-              Add image
+          <div className="upload-frame-merge">
+            <div className="upload-sub-frame-left">
+              <h1 className="upload-title-text">Add image</h1>
             </div>
-            <div>
-              <form onSubmit={this.handleSubmit}>
-                Image
-                <Dropzone multiple={false} accept="image/*"
-                  onDrop={this.handlePhotoDrop}>
-                  {
-                    this.state.photo_url === "" ?
-                      <h3>Drag and drop a file here to upload</h3>
-                      :
-                      <img src={this.state.photo_url} />
-                  }
-
-                </Dropzone>
-                Description
-                <input type="text" onChange={this.update('description')} value={this.state.description}></input>
-                Location
-                <input type="text" onChange={this.update('location')} value={this.state.location}></input>
-                <input type="submit" value="Submit"></input>
-              </form>
+            <div className="upload-sub-frame-right">
+              <div className="upload-input-frame">
+                <div className="upload-input">
+                  <div className="upload-input-left">
+                    Image
+                  </div>
+                  <Dropzone multiple={false} accept="image/*"
+                    onDrop={this.handlePhotoDrop} className="upload-input-right-dropzone">
+                    {
+                      this.state.photo_url === "" ?
+                        <div>
+                          <h3>Drag and Drop<br/>
+                            or </h3>
+                          <button>Click Here!</button>
+                        </div>
+                        :
+                        <img src={this.state.photo_url} />
+                    }
+                  </Dropzone>
+                </div>
+                <form onSubmit={this.handleSubmit} className="upload-input-frame">
+                  <div className="upload-input">
+                    <h1 className="upload-input-left">Description</h1>
+                    <input type="text" onChange={this.update('description')} value={this.state.description} className="upload-input-right"></input>
+                  </div>
+                  <div className="upload-input">
+                    <h1 className="upload-input-left">Location</h1>
+                    <input type="text" onChange={this.update('location')} value={this.state.location} className="upload-input-right"></input>
+                  </div>
+                  <div className="upload-input">
+                    <div className="upload-input-left"></div>
+                    <input type="submit" value="Submit" className="upload-input-right-button"></input>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
 

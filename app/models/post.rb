@@ -12,5 +12,6 @@
 #
 
 class Post < ApplicationRecord
+  validates :user_id, :photo_url, presence: true
   belongs_to :user
 end

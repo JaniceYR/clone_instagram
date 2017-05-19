@@ -5,9 +5,9 @@ const PostsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_POSTS:
-      return Object.merge({}, action.posts);
+      return merge({}, action.posts);
     case RECEIVE_POST:
-      return Object.merge({}, state, { [action.post.id]: action.post });
+      return merge({}, state, { [action.post.id]: action.post });
     case REMOVE_POST:
       let newState = merge({}, state);
       delete newState[action.post.id];
