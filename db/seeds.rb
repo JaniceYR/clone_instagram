@@ -8,8 +8,8 @@
 User.destroy_all
 Post.destroy_all
 
-user1 = User.create(username: "test", password: "password",
-                    name: "Janice Lee", bio: "test id no.1", profile_pic_url: "http://res.cloudinary.com/cloneinstagram/image/upload/v1495153573/1662763_1155477257805616_1310834924_a_vhiyti.jpg")
+user1 = User.create(username: "demoID", password: "password",
+                    name: "Janice Lee", bio: "Hi there! This id is for demo. :)", profile_pic_url: "http://res.cloudinary.com/cloneinstagram/image/upload/v1495153573/1662763_1155477257805616_1310834924_a_vhiyti.jpg")
 user2 = User.create(username: "user2", password: "password",
                     name: "User2", bio: "test id no.2")
 user1 = User.create(username: "user3", password: "password",

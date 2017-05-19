@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     processForm: user => dispatch(processForm(user)),
     demoLogin: () => dispatch(login({user:
-                                      {username: "testID",
+                                      {username: "demoID",
                                        password: "password"
                                       }})),
     resetError: () => dispatch(receiveErrors({})),
