@@ -5,7 +5,6 @@ class PostItem extends React.Component {
   render() {
     return(
       <div>
-        <h1>PostItem Page</h1>
         <img src={this.props.post.photo_url} className="post_item_img"/>
       </div>
     );

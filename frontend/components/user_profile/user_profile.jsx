@@ -45,15 +45,20 @@ class UserProfile extends React.Component {
             </div>
           </header>
           <h1>User's post item</h1>
-          {
-            this.props.user.id ? this.props.user.posts.map((post) => {
-              return (
-                <PostItem post={post} key={`post-item-${post.id}`}/>
-              );
-            })
-            : ""
-          }
-
+          <div className="post-item-frame">
+            <ul className="post_item_ul">
+              {
+                this.props.user.id ? this.props.user.posts.reverse().map((post) => {
+                  return (
+                    <li key={`post-item-${post.id}`}>
+                      <PostItem post={post}/>
+                    </li>
+                  );
+                })
+                : ""
+              }
+            </ul>
+          </div>
         </article>
       </div>
     );
