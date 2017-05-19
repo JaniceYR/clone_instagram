@@ -4,7 +4,7 @@ import { ProtectedRoute } from '../../util/route_util';
 
 import Navigation from '../navigation/navigation_container';
 import UserEditContainer from './user_edit_container';
-
+import PostItemContainer from '../post/post_item_container';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -45,6 +45,7 @@ class UserProfile extends React.Component {
             </div>
           </header>
           <h1>User's post item</h1>
+          <PostItemContainer />
         </article>
       </div>
     );
