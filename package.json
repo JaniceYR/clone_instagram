@@ -36,6 +36,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-dropzone": "^3.13.1",
+    "react-modal": "^1.7.7",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
