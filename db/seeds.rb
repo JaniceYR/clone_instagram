@@ -12,9 +12,9 @@ user1 = User.create(username: "demoID", password: "password",
                     name: "Janice Lee", bio: "Hi there! This id is for demo. :)", profile_pic_url: "http://res.cloudinary.com/cloneinstagram/image/upload/v1495153573/1662763_1155477257805616_1310834924_a_vhiyti.jpg")
 user2 = User.create(username: "user2", password: "password",
                     name: "User2", bio: "test id no.2")
-user1 = User.create(username: "user3", password: "password",
+user3 = User.create(username: "user3", password: "password",
                     name: "User3", bio: "test id no.3")
-user2 = User.create(username: "user4", password: "password",
+user4 = User.create(username: "user4", password: "password",
                     name: "User4", bio: "test id no.4")
 
 post1 = Post.create(user_id: user1.id, photo_url: "http://res.cloudinary.com/cloneinstagram/image/upload/v1495134612/18513006_1538444429521465_7732084092316942336_n_qqn9sm.jpg",

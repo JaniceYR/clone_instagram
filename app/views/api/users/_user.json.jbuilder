@@ -7,5 +7,5 @@ json.posts user.posts do |post|
   json.description post.description
   json.location post.location
 
-  json.user post.user
+  json.user post.user, :id
 end

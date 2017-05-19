@@ -6,13 +6,15 @@ import PostItem from './post_item';
 const mapStateToProps = (state, {postId}) => {
   return {
     postId: postId,
-    post: state.post
+    post: state.posts
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchPost: postId => dispatch(fetchPost(postId))
-});
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchPost: postId => dispatch(fetchPost(postId))
+  };
+};
 
 export default connect(
   mapStateToProps,
