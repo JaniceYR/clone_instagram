@@ -5,25 +5,130 @@
 }
 
 .edit-frame-merge {
-
-  margin: auto;
+  width: 90%;
   display:flex;
-  width: 80%;
   flex-direction: row;
   background-color: $white;
   border: 1px solid $border-gray;
+  border-radius: 3px;
+  justify-content: stretch;
+  margin: 60px auto 0;
+  max-width: 935px
 }
 .edit-sub-frame-left {
   border-right: 1px solid $border-gray;
   background-color: $white;
-  width: 240px;
+  flex-basis: 236px;
   height: 500px;
 }
 .edit-sub-frame-right {
-  flex: 1;
+  flex: 1 1 400px;
+  min-width: 50px;
   height: 500px;
 }
-.user-pic-frame {
+.edit-title-text {
+  border-left: 2px solid $text-gray;
+  color: $text-gray;
+  font-size: 16px;
+  font-weight: 600;
+  height: 20px;
+  padding: 16px 16px 16px 30px;
+}
+
+.edit-user-username-frame {
+  margin: 32px 0 16px;
   display:flex;
   flex-direction: row;
+  justify-content: flex-start;
+}
+.edit-user-pic-frame {
+  margin: 0 32px 0 124px;
+  height: 38px;
+  width: 38px;
+  background-color: $text-gray;
+  border-radius: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.edit-user-pic-button {
+  border: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+.edit-user-pic {
+  height: 38px;
+  width: 38px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.edit-user-username {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+}
+.edit-user-input-frame {
+  align-items: stretch;display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+.edit-user-input {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+.edit-user-input-left {
+  padding-right: 32px;
+  text-align: right;
+  padding-left: 32px;
+  margin-top: 6px;
+  flex: 0 0 194px;
+  box-sizing: border-box;
+ color: $text-gray;
+ -webkit-box-flex: 0;
+ font-size: 16px;
+ font-weight: 600;
+ line-height: 18px;
+}
+.edit-user-input-right {
+  background: 0 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: $text-gray;
+  -webkit-box-flex: 0;
+  flex: 0 1 355px;
+  font-size: 16px;
+  height: 32px;
+  padding: 0 10px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height: 18px;
+  user-select: text;
+  cursor: auto;
+}
+.edit-user-input-right-button {
+  padding: 0 24px;
+  cursor: pointer;
+  background: $light-blue;
+  border-color: $light-blue;
+  color: $white;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100px;
+  align-items: flex-start;
+  text-align: center;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }

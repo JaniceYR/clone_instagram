@@ -43,37 +43,39 @@ class UserEdit extends React.Component {
         <div className="edit-page">
           <div className="edit-frame-merge">
             <div className="edit-sub-frame-left">
-              <h1>Edit Profile</h1>
+              <div className="edit-title-text">Edit Profile</div>
             </div>
             <div className="edit-sub-frame-right">
-              <div className="user-pic-frame">
-                  <div>
-                    here is for user profile pic{this.props.user.profile_pic_url}
+              <div className="edit-user-username-frame">
+                  <div className="edit-user-pic-frame">
+                    <button className="edit-user-pic-button">
+                      <img src={this.props.user.profile_pic_url} className="edit-user-pic"></img>
+                    </button>
                   </div>
                   <div>
-                    <h1>{this.props.user.username}</h1>
+                    <h1 className="edit-user-username">{this.props.user.username}</h1>
                   </div>
               </div>
-              <div>
-                <form onSubmit={this.handleSubmit}>
-                  <div>
-                    <h1>Name</h1>
-                    <input type="text" onChange={this.update('name')} value={this.state.name} placeholder="Full Name"></input>
+              <form onSubmit={this.handleSubmit}>
+                <div className="edit-user-input-frame">
+                  <div className="edit-user-input">
+                    <h1 className="edit-user-input-left">Name</h1>
+                    <input type="text" onChange={this.update('name')} value={this.state.name} placeholder="Full Name" className="edit-user-input-right"></input>
                   </div>
-                  <div>
-                    <h1>Username</h1>
-                    <input type="text" onChange={this.update('username')} value={this.state.username} placeholder="username"></input>
+                  <div className="edit-user-input">
+                    <h1 className="edit-user-input-left">Username</h1>
+                    <input type="text" onChange={this.update('username')} value={this.state.username} placeholder="username" className="edit-user-input-right"></input>
                   </div>
-                  <div>
-                    <h1>Bio</h1>
-                    <input type="text" onChange={this.update('bio')} value={this.state.bio} placeholder="Bio"></input>
+                  <div className="edit-user-input">
+                    <h1 className="edit-user-input-left">Bio</h1>
+                    <input type="text" onChange={this.update('bio')} value={this.state.bio} placeholder="Bio" className="edit-user-input-right"></input>
                   </div>
-                  <div>
-                    <h1> </h1>
-                    <input type="submit" value="Submit"></input>
+                  <div className="edit-user-input">
+                    <h1 className="edit-user-input-left"> </h1>
+                    <input type="submit" value="Submit" className="edit-user-input-right-button"></input>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
