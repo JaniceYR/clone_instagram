@@ -4,7 +4,7 @@ import { ProtectedRoute } from '../../util/route_util';
 
 import Navigation from '../navigation/navigation_container';
 import UserEditContainer from './user_edit_container';
-import PostItemContainer from '../post/post_item_container';
+import PostItem from '../post/post_item';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -45,7 +45,15 @@ class UserProfile extends React.Component {
             </div>
           </header>
           <h1>User's post item</h1>
-          <PostItemContainer postId="1"/>
+          {
+            this.props.user.id ? this.props.user.posts.map((post) => {
+              return (
+                <PostItem post={post} key={`post-item-${post.id}`}/>
+              );
+            })
+            : ""
+          }
+
         </article>
       </div>
     );
