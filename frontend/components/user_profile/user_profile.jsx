@@ -19,25 +19,27 @@ class UserProfile extends React.Component {
       <div>
         <Navigation />
         <h1>User Profile Page(id: {this.props.user.username})</h1>
-        <header>
-          <div>
-            <img src={this.props.user.profile_pic_url} />
-          </div>
-          <div>
-            <div>
-              <h1>{this.props.user.username}</h1>
-              <Link to={`${this.props.user.id}/edit`}>
-                <button>Edit Profile</button>
-              </Link>
-              <button>Follow</button>
-              <button>Following</button>
+        <article className="profile-page">
+          <header className="profile-header">
+            <div className="profile-header-left">
+              <img src={this.props.user.profile_pic_url} />
             </div>
-            <div>
-              <h2>{this.props.user.name}</h2>
-              <h2>{this.props.user.bio}</h2>
+            <div className="profile-header-right">
+              <div className="profile-header-right-1">
+                <h1>{this.props.user.username}</h1>
+                <Link to={`${this.props.user.id}/edit`}>
+                  <button>Edit Profile</button>
+                </Link>
+                <button>Follow</button>
+                <button>Following</button>
+              </div>
+              <div>
+                <h2>{this.props.user.name}</h2>
+                <h2>{this.props.user.bio}</h2>
+              </div>
             </div>
-          </div>
-        </header>
+          </header>
+        </article>
       </div>
     );
   }

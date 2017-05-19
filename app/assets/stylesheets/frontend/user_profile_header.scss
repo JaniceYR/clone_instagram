@@ -1,1 +1,52 @@
 @import "colors.scss";
+
+.profile-page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.profile-header {
+  width: 100%;
+  max-width: 1010px;
+  display: flex;
+  padding: 40px 20px 0;
+  margin-bottom: 44px;
+  flex-direction: row;
+}
+
+.profile-header-left {
+  flex-basis: 0;
+  flex-grow: 1;
+  align-items: stretch;
+  margin-right: 30px;
+  display: block;
+  display: flex;
+
+  img {
+    margin: auto;
+    background-color: $background-gray;
+    border-radius: 50%;
+    width: 152px;
+    height: 152px;
+  }
+}
+
+.profile-header-right {
+  flex-basis: 30px;
+  flex-grow: 2;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  color: $text-gray;
+  position: relative;
+}
+.profile-header-right-1 {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 200;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
