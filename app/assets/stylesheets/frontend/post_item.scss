@@ -9,19 +9,19 @@
   flex-direction: row;
   list-style-type: none;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1010px;
+  max-width: 935px;
 }
 
 .post_item_ul > li {
-  width: 30%;
-  margin: 1.5% 1.5%;
+  width: 32%;
   max-width: 293px;
   max-height: 293px;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 2%;
 }
 
 .post_item_img {

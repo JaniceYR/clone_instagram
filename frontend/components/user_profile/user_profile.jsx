@@ -48,7 +48,7 @@ class UserProfile extends React.Component {
           <div className="post-item-frame">
             <ul className="post_item_ul">
               {
-                this.props.user.id ? this.props.user.posts.reverse().map((post) => {
+                this.props.user.id ? this.props.user.posts.map((post) => {
                   return (
                     <li key={`post-item-${post.id}`}>
                       <PostItem post={post}/>
