@@ -18,17 +18,18 @@ const style = {
   },
   content : {
     position        : 'absolute',
-    top             : '140px',
+    top             : '5%',
     left            : 0,
     right           : 0,
-    bottom          : '140px',
+    bottom          : '5%',
     border          : '0px solid',
     padding         : 0,
-    width : '90%',
-    maxWidth : '935px',
-    // background : 'transparent',
-    borderRadius : 0,
-    margin : 'auto',
+    width           : '90%',
+    height          : 'auto',
+    maxWidth        : '935px',
+    maxHeight       : '600px',
+    borderRadius    : 0,
+    margin          : 'auto',
     zIndex          : 11
   }
 };
@@ -53,9 +54,10 @@ class PostItem extends React.Component {
 
   render() {
     let thisPost = this.props.post;
+    let thisUser = this.props.user;
     return(
-      <div>
-        <img src={this.props.post.photo_url} className="post_item_img" onClick={this.openModal}/>
+      <div className="post-item-img-frame">
+        <img src={this.props.post.photo_url} className="post-item-img" onClick={this.openModal}/>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
@@ -63,7 +65,7 @@ class PostItem extends React.Component {
           onAfterOpen={this.onModalOpen}
           contentLabel="Modal"
           >
-            <PostDetailContainer post={thisPost} />
+          <PostDetailContainer post={thisPost} user={thisUser}/>
         </Modal>
       </div>
     );

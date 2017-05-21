@@ -46,15 +46,14 @@ class UserProfile extends React.Component {
           </header>
           <h1>User's post item</h1>
           <div className="post-item-frame">
-            <ul className="post_item_ul">
+            <ul className="post-item-ul">
               {
-                this.props.user.id ? this.props.user.posts.map((post) => {
-                  return (
+                this.props.user.id ? this.props.user.posts.map((post) => (
                     <li key={`post-item-${post.id}`}>
-                      <PostItem post={post}/>
+                      <PostItem post={post} user={this.props.user}/>
                     </li>
-                  );
-                })
+                  )
+                )
                 : ""
               }
             </ul>

@@ -6,6 +6,4 @@ json.posts user.posts do |post|
   json.photo_url post.photo_url
   json.description post.description
   json.location post.location
-
-  json.user post.user, :id
 end
