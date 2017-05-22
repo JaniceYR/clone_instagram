@@ -14,7 +14,11 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
   }
-  componentWillR
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.pathname !== this.props.location.pathname){
+    this.props.fetchUser(nextProps.match.params.userId);
+    }
+  }
   render() {
     return(
       <div>
