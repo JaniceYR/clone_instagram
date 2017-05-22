@@ -23,11 +23,12 @@ class User < ApplicationRecord
   attr_reader :password
 
   has_many :posts, dependent: :destroy
-  has_many :commnets, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :followings, dependent: :destroy
-  has_many :followers, dependent: :destroy
-
+  has_many :followings,
+    foreign_key: :follower_id
+  has_many :followers,
+    foreign_key: :following_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -49,6 +50,14 @@ class User < ApplicationRecord
     self.save
     self.session_token
   end
+
+  # def followers_count
+  #   followers.count
+  # end
+  #
+  # def following_count
+  #   followings.count
+  # end
 
   private
 
