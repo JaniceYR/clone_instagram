@@ -35,10 +35,70 @@
   padding-bottom: 100%;
   position: relative;
 }
+.post-item-img-hover-frame {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  div {
+    visibility: hidden;
+  }
+}
+.post-item-img-hover {
+  width: 80%;
+  max-width: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.post-item-img-hover > div > h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.post-item-img-hover > div > figure {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 3px; 
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-image: image-url('icons.png');
+  background-repeat: no-repeat;
+}
 
-// .post-item-img-frame :hover {
-//   background: rgba(0, 0, 0, 0.75)
-// }
+.post-item-img-hover > div > figure.like_icon {
+  background-position: -354px -135px;
+}
+
+.post-item-img-hover > div > figure.comment_icon {
+  background-position: -354px -115px;
+}
+
+.post-item-img-hover-frame:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  div {
+    visibility: visible;
+  }
+}
 
 .post-item-img {
   cursor: pointer;

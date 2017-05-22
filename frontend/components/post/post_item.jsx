@@ -58,7 +58,19 @@ class PostItem extends React.Component {
     let thisUser = this.props.user;
     return(
       <div className="post-item-img-frame">
-        <img src={thisPost.photo_url} className="post-item-img" onClick={this.openModal}/>
+        <img src={thisPost.photo_url} className="post-item-img" />
+        <div className="post-item-img-hover-frame" onClick={this.openModal}>
+          <div className="post-item-img-hover" >
+            <div>
+              <figure className="like_icon"></figure>
+              <h3>000</h3>
+            </div>
+              <div><figure className="comment_icon"></figure>
+              <h3>000</h3>
+            </div>
+          </div>
+        </div>
+
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
