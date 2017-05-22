@@ -11,6 +11,10 @@ json.posts user.posts do |post|
   json.comments_count post.comments.count
 end
 
+json.posts_count user.posts.count
+json.followings_count user.followings.count
+json.followers_count user.followers.count
+
 json.followings user.followings do |following|
   json.following_id following.following_id
 end

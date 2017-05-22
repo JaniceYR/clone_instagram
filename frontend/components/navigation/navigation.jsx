@@ -4,13 +4,21 @@ import { Link, withRouter } from 'react-router-dom';
 class Navigation extends React.Component {
   constructor(props){
     super(props);
+
+    this.userProfile = this.userProfile.bind(this);
     this.logout = this.logout.bind(this);
+  }
+
+  userProfile(e) {
+    e.preventDefault();
+    this.props.history.push(`/${this.props.currentUser.id}`);
   }
 
   logout(e) {
     e.preventDefault();
     this.props.logout();
   }
+
 
   render() {
     return(
@@ -26,7 +34,8 @@ class Navigation extends React.Component {
             <Link to={`/${this.props.currentUser.id}/post_upload`} >
               <figure className="icon-uploadphoto"></figure>
             </Link>
-            <Link to={`/${this.props.currentUser.id}`} title="My Page">
+
+            <Link to={`/${this.props.currentUser.id}`}>
               <figure className="icon-user"></figure>
             </Link>
               <figure className="icon-logout" onClick={this.logout} title="Logout"></figure>
@@ -37,4 +46,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

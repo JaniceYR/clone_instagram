@@ -18,7 +18,7 @@ const App = () => (
         <ProtectedRoute path="/feed" component={FeedContainer} />
         <ProtectedRoute path="/:userId/edit" component={UserEditContainer} />
         <ProtectedRoute exact path="/:userId/post_upload" component={PostUploadContainer} />
-        <ProtectedRoute path="/:userId" component={UserProfileContainer} />
+        <ProtectedRoute exact path="/:userId" component={UserProfileContainer} />
     </Switch>
     </div>
 );
