@@ -30,6 +30,7 @@ class UserEdit extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.updateUser({user});
+    this.props.history.push(`/${user.id}`);
   }
 
   render() {
