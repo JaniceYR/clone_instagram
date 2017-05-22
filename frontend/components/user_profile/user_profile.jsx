@@ -5,6 +5,7 @@ import { ProtectedRoute } from '../../util/route_util';
 import Navigation from '../navigation/navigation_container';
 import UserEditContainer from './user_edit_container';
 import PostItem from '../post/post_item';
+import FollowContainer from '../follow/follow_container';
 
 class UserProfile extends React.Component {
   constructor(props){
@@ -48,6 +49,7 @@ class UserProfile extends React.Component {
               <div className="profile-header-right-1">
                 <h1>{this.props.user.username}</h1>
                 {this.editProfile()}
+                <FollowContainer />
               </div>
               <ul className="profile-header-right-2">
                 <li> <h3>{this.props.user.posts_count}</h3>posts</li>

@@ -27,7 +27,9 @@ class Follow extends React.Component {
 
   render() {
     return (
-      {this.followAndUnfollow()}
+      <div>
+        {this.followAndUnfollow()}
+      </div>
     );
   }
 }

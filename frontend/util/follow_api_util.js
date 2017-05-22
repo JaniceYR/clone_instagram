@@ -1,15 +1,15 @@
-export const createFollow = (follower_id, following_id) => {
+export const createFollow = (followerId, followingId) => {
   return $.ajax({
     method: "POST",
     url: "api/follows",
-    data: {follow : {follower_id, following_id}}
+    data: {follow : {followerId, followingId}}
   });
 };
 
-export const deleteFollow = (follower_id, following_id) => {
+export const deleteFollow = (followerId, followingId) => {
   return $.ajax({
     method: "GET",
     url: "api/follows/delete",
-    data: {follow : {follower_id, following_id}}
+    data: {follow : {followerId, followingId}}
   });
 };
