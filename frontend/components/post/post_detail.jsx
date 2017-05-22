@@ -31,7 +31,7 @@ class PostDetail extends React.Component {
               <figure className="like-button"></figure>
               <figure className="add-comment-button"></figure>
             </div>
-            000
+            {`${this.props.post.likes_count} `}
             likes
           </div>
           <div className="post-detail-add-comment-frame">

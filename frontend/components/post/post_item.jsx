@@ -63,10 +63,10 @@ class PostItem extends React.Component {
           <div className="post-item-img-hover" >
             <div>
               <figure className="like_icon"></figure>
-              <h3>000</h3>
+              <h3>{thisPost.likes_count}</h3>
             </div>
               <div><figure className="comment_icon"></figure>
-              <h3>000</h3>
+              <h3>{thisPost.comments_count}</h3>
             </div>
           </div>
         </div>

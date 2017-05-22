@@ -6,6 +6,9 @@ json.posts user.posts do |post|
   json.photo_url post.photo_url
   json.description post.description
   json.location post.location
+
+  json.likes_count post.likes.count
+  json.comments_count post.comments.count
 end
 
 json.followings user.followings do |following|
