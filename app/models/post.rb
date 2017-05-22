@@ -13,5 +13,9 @@
 
 class Post < ApplicationRecord
   validates :user_id, :photo_url, presence: true
+
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
   belongs_to :user
 end

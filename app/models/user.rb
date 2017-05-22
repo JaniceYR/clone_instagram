@@ -22,8 +22,13 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :posts
-  
+  has_many :posts, dependent: :destroy
+  has_many :commnets, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :followings, dependent: :destroy
+  has_many :followers, dependent: :destroy
+
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
