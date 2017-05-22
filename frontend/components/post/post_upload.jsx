@@ -43,7 +43,6 @@ class PostUpload extends React.Component {
           photo_url: response.body.secure_url
         });
       }
-      debugger
     });
   }
 

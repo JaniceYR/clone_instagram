@@ -9,16 +9,48 @@ import PostItem from '../post/post_item';
 class UserProfile extends React.Component {
   constructor(props){
     super(props);
-
+    this.editProfile = this.editProfile.bind(this);
+    this.followAndUnfollow = this.followAndUnfollow.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.pathname !== this.props.location.pathname){
     this.props.fetchUser(nextProps.match.params.userId);
     }
   }
+  editProfile() {
+    if(this.props.currentUser.id === this.props.user.id) {
+      return (
+        <Link to={`${this.props.user.id}/edit`}>
+          <button className="profile-header-right-1-edit-button">
+            Edit Profile
+          </button>
+        </Link>
+      );
+    }
+  }
+  followAndUnfollow() {
+    if(this.props.currentUser.id !== this.props.user.id) {
+      if(this.props.user.followed){
+        return (
+          <button className="profile-header-right-1-edit-button">
+            Following
+          </button>
+        );
+      } else {
+        return (
+          <button className="profile-header-right-1-edit-follow">
+            Follow
+          </button>
+        );
+      }
+    }
+  }
+
   render() {
     return(
       <div>
@@ -31,16 +63,13 @@ class UserProfile extends React.Component {
             <div className="profile-header-right">
               <div className="profile-header-right-1">
                 <h1>{this.props.user.username}</h1>
-                <Link to={`${this.props.user.id}/edit`}>
-                  <button className="profile-header-right-1-edit-button">Edit Profile</button>
-                </Link>
-                <button className="profile-header-right-1-edit-follow">Follow</button>
-                <button className="profile-header-right-1-edit-button">Following</button>
+                {this.editProfile()}
+                {this.followAndUnfollow()}
               </div>
               <ul className="profile-header-right-2">
                 <li> <h3>{this.props.user.posts_count}</h3>posts</li>
                 <li> <h3>{this.props.user.followers_count}</h3>follows</li>
-                <li> <h3>{this.props.user.followings_count}</h3>folloing</li>
+                <li> <h3>{this.props.user.followings_count}</h3>following</li>
               </ul>
               <div className="profile-header-right-3">
                 <h3>{this.props.user.name}</h3>

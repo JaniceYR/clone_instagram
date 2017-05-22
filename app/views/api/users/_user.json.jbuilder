@@ -22,3 +22,9 @@ end
 json.followers user.followers do |follower|
   json.follower_id follower.follower_id
 end
+
+if user.followers.find_by(follower_id: current_user.id)
+  json.followed true
+else
+  json.followed false
+end
