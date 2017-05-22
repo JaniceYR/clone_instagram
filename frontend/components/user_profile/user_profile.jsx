@@ -14,6 +14,7 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
   }
+  componentWillR
   render() {
     return(
       <div>
