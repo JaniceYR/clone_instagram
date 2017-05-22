@@ -26,9 +26,11 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :followings,
-    foreign_key: :follower_id
+    foreign_key: :follower_id,
+    class_name: :Follow
   has_many :followers,
-    foreign_key: :following_id
+    foreign_key: :following_id,
+    class_name: :Follow
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
