@@ -1,16 +1,22 @@
 @import "colors.scss";
 
-.navigation-frame {
+.navigation {
   border-bottom: 1px solid $border-gray;
   background-color: $white;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-frame {
+  max-width: 970px;
+  width: 100%;
   height: 77px;
-  justify-content: space-between;
+  justify-content:space-between;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
 .navigation-logo-frame {
   display: flex;
   flex-direction: row;
