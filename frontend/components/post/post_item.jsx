@@ -50,7 +50,7 @@ class PostItem extends React.Component {
 
   closeModal(){
     this.setState({modalOpen: false});
-    this.props.history.push(`/${this.props.user.id}`);
+    // this.props.history.push(`/${this.props.user.id}`);
   }
 
   render() {

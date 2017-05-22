@@ -50,12 +50,7 @@ class UserProfile extends React.Component {
               {
                 this.props.user.id ? this.props.user.posts.map((post) => (
                     <li key={`post-item-${post.id}`}>
-                      <Link to={{
-                            pathname: `/${post.user_id}/post/${post.id}`,
-                            state: { modal: true, returnTo: this.props.location.pathname }
-                          }}>
-                        <PostItem post={post} user={this.props.user}/>
-                      </Link>
+                      <PostItem post={post} user={this.props.user}/>
                     </li>
                   )
                 )
