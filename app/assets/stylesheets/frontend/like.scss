@@ -1,0 +1,23 @@
+@import "colors.scss";
+
+.like-button-frame {
+ display: flex;
+ flex-direction: row;
+ margin-left: -8px;
+}
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 8px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-image: image-url('icons.png');
+  background-repeat: no-repeat;
+  background-position: -26px -322px;
+}

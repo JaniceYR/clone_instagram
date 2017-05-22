@@ -50,6 +50,7 @@ class PostItem extends React.Component {
 
   closeModal(){
     this.setState({modalOpen: false});
+    this.props.history.push(`/${this.props.user.id}`);
   }
 
   render() {
@@ -57,7 +58,7 @@ class PostItem extends React.Component {
     let thisUser = this.props.user;
     return(
       <div className="post-item-img-frame">
-        <img src={this.props.post.photo_url} className="post-item-img" onClick={this.openModal}/>
+        <img src={thisPost.photo_url} className="post-item-img" onClick={this.openModal}/>
         <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
@@ -72,4 +73,4 @@ class PostItem extends React.Component {
   }
 }
 
-export default PostItem;
+export default withRouter(PostItem);

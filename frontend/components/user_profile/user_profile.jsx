@@ -50,7 +50,12 @@ class UserProfile extends React.Component {
               {
                 this.props.user.id ? this.props.user.posts.map((post) => (
                     <li key={`post-item-${post.id}`}>
-                      <PostItem post={post} user={this.props.user}/>
+                      <Link to={{
+                            pathname: `/${post.user_id}/post/${post.id}`,
+                            state: { modal: true, returnTo: this.props.location.pathname }
+                          }}>
+                        <PostItem post={post} user={this.props.user}/>
+                      </Link>
                     </li>
                   )
                 )
@@ -59,6 +64,7 @@ class UserProfile extends React.Component {
             </ul>
           </div>
         </article>
+        <ProtectedRoute path={'/:userId/post/:postId'} component={PostItem} />
       </div>
     );
   }
