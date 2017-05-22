@@ -10,7 +10,7 @@ class UserProfile extends React.Component {
   constructor(props){
     super(props);
     this.editProfile = this.editProfile.bind(this);
-    this.followAndUnfollow = this.followAndUnfollow.bind(this);
+
   }
 
   componentDidMount() {
@@ -33,23 +33,7 @@ class UserProfile extends React.Component {
       );
     }
   }
-  followAndUnfollow() {
-    if(this.props.currentUser.id !== this.props.user.id) {
-      if(this.props.user.followed){
-        return (
-          <button className="profile-header-right-1-edit-button">
-            Following
-          </button>
-        );
-      } else {
-        return (
-          <button className="profile-header-right-1-edit-follow">
-            Follow
-          </button>
-        );
-      }
-    }
-  }
+
 
   render() {
     return(
@@ -64,7 +48,6 @@ class UserProfile extends React.Component {
               <div className="profile-header-right-1">
                 <h1>{this.props.user.username}</h1>
                 {this.editProfile()}
-                {this.followAndUnfollow()}
               </div>
               <ul className="profile-header-right-2">
                 <li> <h3>{this.props.user.posts_count}</h3>posts</li>
