@@ -39,7 +39,6 @@ class UserEdit extends React.Component {
     return(
       <div>
         <Navigation />
-        <h1>user profile edit page</h1>
         <div className="edit-page">
           <div className="edit-frame-merge">
             <div className="edit-sub-frame-left">
@@ -48,9 +47,8 @@ class UserEdit extends React.Component {
             <div className="edit-sub-frame-right">
               <div className="edit-user-username-frame">
                   <div className="edit-user-pic-frame">
-                    <button className="edit-user-pic-button">
                       <img src={this.props.user.profile_pic_url} className="edit-user-pic"></img>
-                    </button>
+
                   </div>
                   <div>
                     <h1 className="edit-user-username">{this.props.user.username}</h1>

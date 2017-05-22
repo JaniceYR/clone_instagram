@@ -45,20 +45,16 @@
   margin: 0 32px 0 124px;
   height: 38px;
   width: 38px;
-  background-color: $text-gray;
+  background-color: gray;
   border-radius: 50%;
-  box-sizing: border-box;
   overflow: hidden;
   position: relative;
 }
-.edit-user-pic-button {
-  border: 0;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-}
+
 .edit-user-pic {
+  cursor: pointer;
+  border: none;
+  padding: 0;
   height: 38px;
   width: 38px;
   left: 0;

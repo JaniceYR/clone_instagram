@@ -18,7 +18,6 @@ class UserProfile extends React.Component {
     return(
       <div>
         <Navigation />
-        <h1>User Profile Page(id: {this.props.user.username})</h1>
         <article className="profile-page">
           <header className="profile-header">
             <div className="profile-header-left">
@@ -44,7 +43,6 @@ class UserProfile extends React.Component {
               </div>
             </div>
           </header>
-          <h1>User's post item</h1>
           <div className="post-item-frame">
             <ul className="post-item-ul">
               {

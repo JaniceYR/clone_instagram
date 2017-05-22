@@ -64,7 +64,6 @@ class PostUpload extends React.Component {
     return (
       <div className="upload-page">
         <Navigation />
-        <h1> this is post upload component</h1>
         <div>
           <div className="upload-frame-merge">
             <div className="upload-sub-frame-left">
