@@ -8,10 +8,10 @@ json.posts user.posts do |post|
   json.location post.location
 end
 
-json.followings do |following|
+json.followings user.followings do |following|
   json.following_id following.following_id
 end
 
-json.followers do |follower|
+json.followers user.followers do |follower|
   json.follower_id follower.follower_id
 end
