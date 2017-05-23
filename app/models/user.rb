@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  attr_reader :password
+  attr_reader :password, :feed_ids
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -31,6 +31,8 @@ class User < ApplicationRecord
   has_many :followers,
     foreign_key: :following_id,
     class_name: :Follow
+  # has_many :feed,
+  #   through: followings
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -51,6 +53,15 @@ class User < ApplicationRecord
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save
     self.session_token
+  end
+
+  def feed_ids
+    ids = []
+    ids << self.id
+    self.followings.each do |following|
+      ids << following.following_id
+    end
+    ids
   end
 
   private

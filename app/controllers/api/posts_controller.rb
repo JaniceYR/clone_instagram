@@ -1,8 +1,8 @@
 class Api::PostsController < ApplicationController
 
   def index
-    @posts = Post.all
-    render "/api/posts"
+    @posts = Post.where(user_id: current_user.feed_ids)
+    render "/api/posts/index"
   end
 
   def show

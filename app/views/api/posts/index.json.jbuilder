@@ -1,1 +1,3 @@
-json.partial! "api/posts/post", post: @posts
+json.posts @posts.each do |post|
+  json.partial! "api/posts/post", post: post
+end
