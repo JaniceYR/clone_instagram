@@ -3,16 +3,12 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import LikeContainer from '../like/like_container';
+import CommentButton from '../comment/comment_button';
+import CommentInput from '../comment/comment_input';
 
 class PostDetail extends React.Component {
   constructor(props){
     super(props);
-    this.moveCursorToInput = this.moveCursorToInput.bind(this);
-  }
-
-  moveCursorToInput(e) {
-    e.preventDefault();
-    document.getElementById("comment_input").focus();
   }
 
   render() {
@@ -36,16 +32,12 @@ class PostDetail extends React.Component {
           <div className="post-detail-like-frame">
             <div className="like-button-frame">
               <LikeContainer />
-              <label htmlFor="comment_input">
-                <figure className="add-comment-button" onClick={this.moveCursorToInput}></figure>
-              </label>
+              <CommentButton />
             </div>
             {`${this.props.post.likes_count} `}
             likes
           </div>
-          <div className="post-detail-add-comment-frame">
-            <input type="text" placeholder="Add a comment..." id="comment_input" className="post-detail-add-comment"></input>
-          </div>
+          <CommentInput />
         </div>
       </div>
 
