@@ -1,4 +1,4 @@
-export const createFollow = (currentUserId, postId) => {
+export const createLike = (currentUserId, postId) => {
   return $.ajax({
     method: "POST",
     url: "api/likes",
@@ -6,7 +6,7 @@ export const createFollow = (currentUserId, postId) => {
   });
 };
 
-export const deleteFollow = (currentUserId, postId) => {
+export const deleteLike = (currentUserId, postId) => {
   return $.ajax({
     method: "DELETE",
     url: `api/likes/${currentUserId}`,

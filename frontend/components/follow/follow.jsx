@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 class Follow extends React.Component {
   constructor(props) {
     super(props);
-    this.followAndUnfollow = this.followAndUnfollow.bind(this);
+    this.followOrUnfollow = this.followOrUnfollow.bind(this);
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
   }
@@ -19,7 +19,7 @@ class Follow extends React.Component {
     this.props.deleteFollow(this.props.currentUser.id, this.props.user.id);
   }
 
-  followAndUnfollow() {
+  followOrUnfollow() {
     if(this.props.currentUser.id !== this.props.user.id) {
       if(this.props.user.followed){
         return (
@@ -42,7 +42,7 @@ class Follow extends React.Component {
   render() {
     return (
       <div>
-        {this.followAndUnfollow()}
+        {this.followOrUnfollow()}
       </div>
     );
   }

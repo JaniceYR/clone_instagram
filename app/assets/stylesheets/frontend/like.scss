@@ -1,12 +1,12 @@
 @import "colors.scss";
 
-.like-button-frame {
+.like-and-comment-button-frame {
  display: flex;
  flex-direction: row;
  margin-left: -8px;
 }
 
-.like-button {
+.like-button-frame > figure {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -19,5 +19,12 @@
   white-space: nowrap;
   background-image: image-url('icons.png');
   background-repeat: no-repeat;
+}
+
+.like-button {
   background-position: -26px -322px;
+}
+
+.unlike-button {
+  background-position: 0px -322px;
 }

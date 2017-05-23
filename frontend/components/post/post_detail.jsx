@@ -10,6 +10,9 @@ class PostDetail extends React.Component {
   constructor(props){
     super(props);
   }
+  componentDidMount() {
+    this.props.fetchPost(this.props.post.id);
+  }
 
   render() {
     return(
@@ -30,7 +33,7 @@ class PostDetail extends React.Component {
             {this.props.post.description}
           </div>
           <div className="post-detail-like-frame">
-            <div className="like-button-frame">
+            <div className="like-and-comment-button-frame">
               <LikeContainer />
               <CommentButton />
             </div>
