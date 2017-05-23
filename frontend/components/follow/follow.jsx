@@ -8,6 +8,17 @@ class Follow extends React.Component {
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
   }
+
+  follow(e) {
+    e.preventDefault();
+    this.props.createFollow(this.props.currentUser.id, this.props.user.id);
+  }
+
+  unfollow(e) {
+    e.preventDefault();
+    this.props.deleteFollow(this.props.currentUser.id, this.props.user.id);
+  }
+
   followAndUnfollow() {
     if(this.props.currentUser.id !== this.props.user.id) {
       if(this.props.user.followed){
@@ -26,16 +37,6 @@ class Follow extends React.Component {
         );
       }
     }
-  }
-
-  follow(e) {
-    e.preventDefault();
-    this.props.createFollow(this.props.currentUser.id, this.props.user.id);
-  }
-
-  unfollow(e) {
-    e.preventDefault();
-    this.props.deleteFollow(this.props.currentUser.id, this.props.user.id);
   }
 
   render() {
