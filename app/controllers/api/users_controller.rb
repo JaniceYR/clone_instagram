@@ -8,6 +8,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.profile_pic_url = "https://res.cloudinary.com/cloneinstagram/image/upload/v1495480689/dfkmka1kiru8b1x5fiog.jpg"
     if @user.save
       login(@user)
       render "api/users/show"
