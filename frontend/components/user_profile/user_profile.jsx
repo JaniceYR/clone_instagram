@@ -30,11 +30,18 @@ class UserProfile extends React.Component {
   editProfile() {
     if(this.props.currentUser.id === this.props.user.id) {
       return (
-        <Link to={`${this.props.user.id}/edit`}>
-          <button className="profile-header-right-1-edit-button">
-            Edit Profile
-          </button>
-        </Link>
+        <div>
+          <Link to={`${this.props.user.id}/edit`}>
+            <button className="profile-header-right-1-edit-button">
+              Edit Profile
+            </button>
+          </Link>
+          <Link to={`/${this.props.currentUser.id}/post_upload`} >
+            <button className="profile-header-right-1-edit-follow">
+              New Post
+            </button>
+          </Link>
+        </div>
       );
     }
   }
@@ -51,6 +58,7 @@ class UserProfile extends React.Component {
             <div className="profile-header-right">
               <div className="profile-header-right-1">
                 <h1>{this.props.user.username}</h1>
+
                 {this.editProfile()}
                 <FollowContainer />
               </div>
