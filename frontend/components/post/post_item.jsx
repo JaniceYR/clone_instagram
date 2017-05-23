@@ -78,7 +78,7 @@ class PostItem extends React.Component {
           onAfterOpen={this.onModalOpen}
           contentLabel="Modal"
           >
-          <PostDetailContainer post={thisPost} user={thisUser}/>
+          <PostDetailContainer post={thisPost} user={thisUser} closeModal={this.closeModal}/>
         </Modal>
       </div>
     );

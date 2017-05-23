@@ -16,22 +16,19 @@ class PostDetail extends React.Component {
   }
 
   render() {
-
     return(
       <div className="post-detail">
         <div className="post-detail-left">
           <img src={this.props.post.photo_url} className="post-detail-left-img"/>
         </div>
         <div className="post-detail-right">
-          <Link to={`/${this.props.user.id}`} >
-            <div className="post-detail-user-info-frame">
-              <img src={this.props.user.profile_pic_url} className="post-detail-user-info-pic"/>
-              <div className="post-detail-user-info">
-                <h3 className="post-detail-user-info-username">{this.props.user.username}</h3>
-                <h3>{this.props.post.location}</h3>
-              </div>
+          <div className="post-detail-user-info-frame">
+            <img src={this.props.user.profile_pic_url} onClick={this.props.closeModal} className="post-detail-user-info-pic"/>
+            <div className="post-detail-user-info">
+              <h3 className="post-detail-user-info-username" onClick={this.props.closeModal}>{this.props.user.username}</h3>
+              <h3>{this.props.post.location}</h3>
             </div>
-          </Link>
+          </div>
           <div className="post-detail-comment-frame">
             {this.props.user.username}
             {this.props.post.description}

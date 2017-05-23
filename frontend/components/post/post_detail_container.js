@@ -3,10 +3,9 @@ import { createPost } from '../../actions/post_actions';
 import PostDetail from './post_detail';
 
 
-const mapStateToProps = (state, { user, post} ) => {
+const mapStateToProps = (state, props ) => {
   return {
-    user: user,
-    post: post
+    props: props
   };
 };
 
