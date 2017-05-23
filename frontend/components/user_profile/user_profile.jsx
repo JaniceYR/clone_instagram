@@ -20,9 +20,13 @@ class UserProfile extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.pathname !== this.props.location.pathname){
-    this.props.fetchUser(nextProps.match.params.userId);
+      this.props.fetchUser(nextProps.match.params.userId);
+    }
+    if (nextProps.user.followed !== this.props.user.followed){
+      this.props.fetchUser(nextProps.match.params.userId);
     }
   }
+
   editProfile() {
     if(this.props.currentUser.id === this.props.user.id) {
       return (
@@ -34,7 +38,6 @@ class UserProfile extends React.Component {
       );
     }
   }
-
 
   render() {
     return(
