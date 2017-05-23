@@ -10,9 +10,9 @@ class PostDetail extends React.Component {
   constructor(props){
     super(props);
   }
-  // componentDidMount() {
-  //   this.props.fetchPost(this.props.post.id);
-  // }
+  componentDidMount() {
+    this.props.fetchPost(this.props.post.id);
+  }
 
   render() {
     return(
@@ -37,7 +37,7 @@ class PostDetail extends React.Component {
               <LikeContainer />
               <CommentButton />
             </div>
-            {`${this.props.post.likes_count} `}
+            {`${this.props.postDetail.likes_count} `}
             likes
           </div>
           <CommentInput />

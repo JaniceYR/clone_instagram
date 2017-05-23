@@ -44,33 +44,19 @@ class PostItem extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchPost(this.props.post.id);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    // debugger
-    if (nextProps.post.likes_count !== this.props.post.likes_count){
-      this.props.fetchPost(this.props.post.id);
-    }
-  }
-
   openModal(){
     this.setState({modalOpen: true});
   }
 
   closeModal(){
     this.setState({modalOpen: false});
-    // this.props.history.push(`/${this.props.user.id}`);
+    this.props.fetchUser(this.props.user.id);
   }
 
   render() {
     let thisPost = this.props.post;
     let thisUser = this.props.user;
-    // debugger
-    // return (
-    //   <div>test</div>
-    // );
+
     return(
       <div className="post-item-img-frame">
         <img src={thisPost.photo_url} className="post-item-img" />
@@ -78,7 +64,7 @@ class PostItem extends React.Component {
           <div className="post-item-img-hover" >
             <div>
               <figure className="like_icon"></figure>
-              <h3>{thisPost.likes_count}</h3>
+              <h3>{this.props.post.likes_count}</h3>
             </div>
               <div><figure className="comment_icon"></figure>
               <h3>{thisPost.comments_count}</h3>
