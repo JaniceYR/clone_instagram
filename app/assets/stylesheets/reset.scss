@@ -25,3 +25,11 @@ body, button, input, textarea, div, a {
 input {
   cursor: auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}

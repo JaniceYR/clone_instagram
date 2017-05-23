@@ -4,7 +4,7 @@ import Like from './like';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser,
+    userId: state.session.currentUser.id,
     post: state.post
   };
 };
