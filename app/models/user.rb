@@ -53,14 +53,6 @@ class User < ApplicationRecord
     self.session_token
   end
 
-  # def followers_count
-  #   followers.count
-  # end
-  #
-  # def following_count
-  #   followings.count
-  # end
-
   private
 
   def ensure_session_token
