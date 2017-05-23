@@ -9,3 +9,6 @@ if post.likes.find_by(user_id: current_user.id)
 else
   json.liked false
 end
+
+json.likes_count post.likes.count
+json.comments_count post.comments.count

@@ -44,6 +44,13 @@ class PostItem extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    debugger
+    // if (nextProps.post.followed !== this.props.user.followed){
+    //   this.props.fetchUser(nextProps.match.params.userId);
+    // }
+  }
+
   openModal(){
     this.setState({modalOpen: true});
   }
