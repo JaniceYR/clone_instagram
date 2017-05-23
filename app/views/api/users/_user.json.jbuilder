@@ -1,6 +1,6 @@
 json.extract! user, :id, :username, :name, :bio, :profile_pic_url
 
-json.posts user.posts do |post|
+json.posts user.posts.sort_by{|post| post.created_at}.reverse do |post|
   json.id post.id
   # json.user_id post.user_id
   json.photo_url post.photo_url
@@ -9,7 +9,9 @@ json.posts user.posts do |post|
 
   json.likes_count post.likes.count
   json.comments_count post.comments.count
+  json.created post.created_at
 end
+
 
 json.posts_count user.posts.count
 json.followings_count user.followings.count
