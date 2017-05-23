@@ -44,11 +44,15 @@ class PostItem extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchPost(this.props.post.id);
+  }
+
   componentWillReceiveProps(nextProps) {
-    debugger
-    // if (nextProps.post.followed !== this.props.user.followed){
-    //   this.props.fetchUser(nextProps.match.params.userId);
-    // }
+    // debugger
+    if (nextProps.post.likes_count !== this.props.post.likes_count){
+      this.props.fetchPost(this.props.post.id);
+    }
   }
 
   openModal(){
@@ -63,6 +67,10 @@ class PostItem extends React.Component {
   render() {
     let thisPost = this.props.post;
     let thisUser = this.props.user;
+    // debugger
+    // return (
+    //   <div>test</div>
+    // );
     return(
       <div className="post-item-img-frame">
         <img src={thisPost.photo_url} className="post-item-img" />

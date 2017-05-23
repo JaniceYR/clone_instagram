@@ -4,7 +4,7 @@ import { ProtectedRoute } from '../../util/route_util';
 
 import Navigation from '../navigation/navigation_container';
 import UserEditContainer from './user_edit_container';
-import PostItem from '../post/post_item';
+import PostItemContainer from '../post/post_item_container';
 import FollowContainer from '../follow/follow_container';
 
 class UserProfile extends React.Component {
@@ -70,7 +70,7 @@ class UserProfile extends React.Component {
               {
                 this.props.user.id ? this.props.user.posts.map((post) => (
                     <li key={`post-item-${post.id}`}>
-                      <PostItem post={post} user={this.props.user}/>
+                      <PostItemContainer post={post}/>
                     </li>
                   )
                 )
@@ -79,7 +79,7 @@ class UserProfile extends React.Component {
             </ul>
           </div>
         </article>
-        <ProtectedRoute path={'/:userId/post/:postId'} component={PostItem} />
+        <ProtectedRoute path={'/:userId/post/:postId'} component={PostItemContainer} />
       </div>
     );
   }
