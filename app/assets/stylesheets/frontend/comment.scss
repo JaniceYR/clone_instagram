@@ -15,11 +15,12 @@
   background-repeat: no-repeat;
   background-position: -104px -322px;
 }
-//
-// .comment-list {
-//   display: flex;
-//   flex-direction: row;
-// }
+
+.comment-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .comment-username {
   cursor: pointer;
   font-weight: 600;

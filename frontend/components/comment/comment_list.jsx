@@ -5,11 +5,11 @@ class CommentList extends React.Component {
   constructor(props){
     super(props);
     this.ownerDescription = this.ownerDescription.bind(this);
+    // this.deleteComment = this.deleteComment.bind(this);
   }
 
   ownerDescription() {
     if (this.props.description) {
-      debugger
       return (
         <li key='comment-user-description'>
           {this.props.username}
@@ -18,6 +18,16 @@ class CommentList extends React.Component {
       );
     }
   }
+
+  deleteCommentButton(comment) {
+    return (
+      <button>X</button>
+    );
+  }
+
+  // deleteComment(commentId) {
+  //   this.props.deleteComment(commentId);
+  // }
 
   render(){
     // debugger
@@ -29,10 +39,13 @@ class CommentList extends React.Component {
             this.props.comments ? this.props.comments.map((comment) =>
 
               <li className="comment-list" key={`comment-${comment.id}`}>
-                <Link to={`/${comment.user_id}`} className="comment-username">
-                  {comment.username}
-                </Link>
-                {comment.body}
+                <h3>
+                  <Link to={`/${comment.user_id}`} className="comment-username">
+                    {comment.username}
+                  </Link>
+                  {comment.body}
+                </h3>
+                {this.deleteCommentButton(comment)}
               </li>
             )
             : ""
