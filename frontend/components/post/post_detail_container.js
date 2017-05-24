@@ -5,6 +5,7 @@ import PostDetail from './post_detail';
 
 
 const mapStateToProps = (state, props ) => {
+  // debugger
   return {
     postDetail: state.posts,
     props: props

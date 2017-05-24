@@ -20,12 +20,13 @@ class CommentInput extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
+    // e.preventDefault();
+    // debugger
     const comment = this.state;
-    debugger
-    comment.user_id = this.props.currentUser.id;
-    comment.post_id = this.props.postDetail.id;
+    comment.user_id = this.props.userId;
+    comment.post_id = this.props.postId;
     this.props.createComment({comment});
+    this.setState({body: ""});
   }
 
   render() {

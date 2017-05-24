@@ -3,16 +3,25 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import LikeContainer from '../like/like_container';
+import CommentList from '../comment/comment_list';
 import CommentButton from '../comment/comment_button';
-import CommentInput from '../comment/comment_input';
+import CommentInputContainer from '../comment/comment_input_container';
 
 class PostDetail extends React.Component {
   constructor(props){
     super(props);
   }
+
   componentDidMount() {
     this.props.fetchPost(this.props.post.id);
   }
+
+  //
+  // componentWillReceiveProps(nextProps) {
+  //   debugger
+  //
+  //   // this.props.fetchPost(this.props.post.id);
+  // }
 
   render() {
     return(
@@ -29,8 +38,9 @@ class PostDetail extends React.Component {
             </div>
           </div>
           <div className="post-detail-comment-frame">
-            {this.props.user.username}
-            {this.props.post.description}
+            <CommentList comments={this.props.postDetail.comments}
+                        username={this.props.user.username}
+                        description={this.props.post.description}/>
           </div>
           <div className="post-detail-like-frame">
             <div className="like-and-comment-button-frame">
@@ -40,7 +50,7 @@ class PostDetail extends React.Component {
             {`${this.props.postDetail.likes_count} `}
             likes
           </div>
-          <CommentInput />
+          <CommentInputContainer />
         </div>
       </div>
 
