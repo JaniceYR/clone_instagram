@@ -1,6 +1,6 @@
 @import "colors.scss";
 
-.add-comment-button {
+.comment-add-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -21,9 +21,24 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .comment-username {
   cursor: pointer;
   font-weight: 600;
   color: $text-gray;
-  margin-right: 4px;white-space: nowrap;
+  margin-right: 4px;
+}
+
+.comment-delete-button {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  text-indent: 110%;
+  display:inline-block;
+  overflow: hidden;
+  background-image: image-url('icons.png');
+  background-repeat: no-repeat;
+  background-position: -173px -112px;
 }

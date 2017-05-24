@@ -4,11 +4,20 @@ import { deleteComment } from "../../actions/comment_actions";
 
 import CommentList from './comment_list';
 
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    currentUserId: state.session.currentUser.id,
+    postOwnerId: state.posts.user_id
+  };
+};
+
+
 const mapDispatchToProps = (dispatch) => ({
-  deleteComment: (comment) => dispatch(deleteComment(comment))
+  deleteComment: (commentId) => dispatch(deleteComment(commentId))
 });
 
 export default connect (
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(CommentList);

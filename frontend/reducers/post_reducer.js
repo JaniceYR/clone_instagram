@@ -30,7 +30,7 @@ const PostsReducer = (state = {}, action) => {
       return addNewComment;
     case REMOVE_COMMENT:
       let removeComment =  merge({}, state);
-      // removeComment.comments = removeComment.comments.filter((comment, index) => comment.id = )
+      removeComment.comments = removeComment.comments.filter( (comment, index) => comment.id !== action.comment.id);
       return removeComment;
     default:
       return state;

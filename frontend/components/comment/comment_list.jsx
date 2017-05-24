@@ -5,32 +5,43 @@ class CommentList extends React.Component {
   constructor(props){
     super(props);
     this.ownerDescription = this.ownerDescription.bind(this);
-    // this.deleteComment = this.deleteComment.bind(this);
+    this.deleteCommentButton = this.deleteCommentButton.bind(this);
+    this.deleteComment = this.deleteComment.bind(this);
   }
 
   ownerDescription() {
+
     if (this.props.description) {
       return (
         <li key='comment-user-description'>
-          {this.props.username}
-          {this.props.description}
+          <h3>
+            <Link to={`/${this.props.postOwnerId}`} className="comment-username">
+            {this.props.username}
+            </Link>
+            {this.props.description}
+          </h3>
         </li>
       );
     }
   }
 
   deleteCommentButton(comment) {
-    return (
-      <button>X</button>
-    );
+    if (this.props.currentUserId === this.props.postOwnerId
+      || this.props.currentUserId === comment.user_id) {
+      return (
+        <figure onClick={() => this.deleteComment(comment.id)}
+                className="comment-delete-button">
+        </figure>
+      );
+    }
   }
 
-  // deleteComment(commentId) {
-  //   this.props.deleteComment(commentId);
-  // }
+  deleteComment(commentId) {
+    event.preventDefault();
+    this.props.deleteComment(commentId);
+  }
 
   render(){
-    // debugger
     return(
       <div>
         <ul>

@@ -33,7 +33,7 @@ class PostDetail extends React.Component {
           <div className="post-detail-comment-frame">
             <CommentListContainer comments={this.props.postDetail.comments}
                         username={this.props.user.username}
-                        description={this.props.post.description}/>
+                        description={this.props.postDetail.description}/>
           </div>
           <div className="post-detail-like-frame">
             <div className="like-and-comment-button-frame">

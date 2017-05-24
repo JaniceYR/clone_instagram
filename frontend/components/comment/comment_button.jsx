@@ -15,7 +15,7 @@ class CommentButton extends React.Component {
   render() {
     return (
       <label htmlFor="comment_input">
-        <figure className="add-comment-button" onClick={this.moveCursorToInput}></figure>
+        <figure className="comment-add-button" onClick={this.moveCursorToInput}></figure>
       </label>
     );
   }
