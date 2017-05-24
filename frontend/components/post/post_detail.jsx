@@ -23,13 +23,13 @@ class PostDetail extends React.Component {
           <img src={this.props.post.photo_url} className="post-detail-left-img"/>
         </div>
         <div className="post-detail-right">
-          <div className="post-detail-user-info-frame">
+          <header className="post-detail-user-info-frame">
             <img src={this.props.user.profile_pic_url} onClick={this.props.closeModal} className="post-detail-user-info-pic"/>
             <div className="post-detail-user-info">
               <h3 className="post-detail-user-info-username" onClick={this.props.closeModal}>{this.props.user.username}</h3>
               <h3>{this.props.post.location}</h3>
             </div>
-          </div>
+          </header>
           <div className="post-detail-comment-frame">
             <CommentListContainer comments={this.props.postDetail.comments}
                         username={this.props.user.username}
@@ -44,7 +44,9 @@ class PostDetail extends React.Component {
               {`${this.props.postDetail.likes_count} `} likes
             </h3>
           </div>
-          <CommentInputContainer />
+          <div className="post-datail-comment-input-frame">
+            <CommentInputContainer />
+          </div>
         </div>
       </div>
 

@@ -58,12 +58,17 @@
   min-height: 0;
   overflow: auto;
 }
+
 .post-detail-like-frame {
   margin: 0 auto;
   width: 287px;
-  height: 90px;
+  height: 65px;
   border-top: 1px solid $border-gray;
   color: $text-gray;
   font-weight: 600;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+.post-datail-comment-input-frame {
+  width: 287px;
+  margin: 0 24px;
 }
