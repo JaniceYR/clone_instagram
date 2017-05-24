@@ -37,7 +37,8 @@ class PostDetail extends React.Component {
           </div>
           <div className="post-detail-like-frame">
             <div className="like-and-comment-button-frame">
-              <LikeContainer />
+              <LikeContainer postId={this.props.postDetail.id}
+                            liked={this.props.postDetail.liked}/>
               <CommentButton />
             </div>
             <h3 className="like-count">

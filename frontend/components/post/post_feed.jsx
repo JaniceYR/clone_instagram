@@ -27,8 +27,8 @@ class PostFeed extends React.Component {
 
         <div className="post-feed-bottom-frame">
           <div className="like-and-comment-button-frame">
-            <LikeContainer />
-            <CommentButton />
+            <LikeContainer postId={this.props.post.id}
+                          liked={this.props.post.liked}/>
           </div>
           <h3 className="like-count">
             {`${this.props.post.likes_count} `} likes
