@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { createFollow, deleteFollow } from "../../actions/follow_actions";
+
 import Follow from './follow';
 
 const mapStateToProps = (state, ownProps) => {

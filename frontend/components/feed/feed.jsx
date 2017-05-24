@@ -18,7 +18,7 @@ class Feed extends React.Component {
         <Navigation />
         <ul className="feed-page-ul">
           {
-            this.props.feed.posts ? this.props.feed.posts.map((post) =>
+            this.props.feed ? this.props.feed.map((post) =>
               <li key={`feed-post-${post.id}`} className="feed-page-li">
                 <PostFeed post={post} />
               </li>

@@ -21,7 +21,6 @@ export const createComment = (comment) => dispatch => {
 };
 
 export const deleteComment = (commentId) => dispatch => {
-  // debugger
   return (
     APIUtil.deleteComment(commentId)
     .then( deletedComment => dispatch(removeComment(deletedComment)))

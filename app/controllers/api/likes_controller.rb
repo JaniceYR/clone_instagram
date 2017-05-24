@@ -4,6 +4,7 @@ class Api::LikesController < ApplicationController
     @like = Like.new(like_params)
     if @like.save
       render "api/likes/show"
+      # render json: @like
     else
       render json: @like.errors.full_messages, status: 422
     end

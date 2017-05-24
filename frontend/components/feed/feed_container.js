@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { values } from 'lodash';
 
 import { fetchFeed } from "../../actions/feed_actions";
 
@@ -6,7 +7,7 @@ import Feed from './feed';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    feed: state.feed
+    feed: values(state.feed)
   };
 };
 
