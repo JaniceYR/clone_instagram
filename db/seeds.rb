@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Post.destroy_all
-Follow.destroy_all
-Like.destroy_all
-Comment.destroy_all
+# User.destroy_all
+# Post.destroy_all
+# Follow.destroy_all
+# Like.destroy_all
+# Comment.destroy_all
 
 user1 = User.create(username: "demoID", password: "password",
                     name: "Janice Lee", bio: "Hi there! This id is for demo. :)", profile_pic_url: "https://res.cloudinary.com/cloneinstagram/image/upload/v1495406902/1662763_1155477257805616_1310834924_a_xmqzhi.jpg")
