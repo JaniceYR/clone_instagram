@@ -5,6 +5,7 @@ json.posts user.posts.reverse do |post|
   json.photo_url post.photo_url
   json.likes_count post.likes.count
   json.comments_count post.comments.count
+  json.location post.location
   json.created post.created_at
 end
 

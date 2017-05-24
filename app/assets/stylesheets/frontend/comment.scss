@@ -15,3 +15,14 @@
   background-repeat: no-repeat;
   background-position: -104px -322px;
 }
+//
+// .comment-list {
+//   display: flex;
+//   flex-direction: row;
+// }
+.comment-username {
+  cursor: pointer;
+  font-weight: 600;
+  color: $text-gray;
+  margin-right: 4px;white-space: nowrap;
+}

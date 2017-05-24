@@ -27,8 +27,12 @@ class CommentList extends React.Component {
           {this.ownerDescription()}
           {
             this.props.comments ? this.props.comments.map((comment) =>
-              <li key={`comment-${comment.id}`}>
-                {comment.username} {comment.body}
+
+              <li className="comment-list" key={`comment-${comment.id}`}>
+                <Link to={`/${comment.user_id}`} className="comment-username">
+                  {comment.username}
+                </Link>
+                {comment.body}
               </li>
             )
             : ""
