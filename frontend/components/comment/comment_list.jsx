@@ -13,7 +13,7 @@ class CommentList extends React.Component {
 
     if (this.props.description) {
       return (
-        <li key='comment-user-description'>
+        <li key='comment-user-description' className="comment-list" >
           <h3>
             <Link to={`/${this.props.postOwnerId}`} className="comment-username">
             {this.props.username}

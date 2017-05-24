@@ -13,3 +13,8 @@ end
 
 json.likes_count post.likes.count
 json.comments_count post.comments.count
+
+json.user do
+  json.username post.user.username
+  json.profile_pic_url post.user.profile_pic_url
+end

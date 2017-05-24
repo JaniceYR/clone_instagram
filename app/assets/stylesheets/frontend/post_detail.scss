@@ -67,20 +67,3 @@
   font-weight: 600;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
-.post-detail-add-comment-frame {
-  margin: 0 auto;
-  width: 287px;
-  margin-top: 4px;
-  border-top: 1px solid $border-gray;
-  height: 56px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.post-detail-add-comment {
-  height: 18px;
-  border: none;
-  font-size: 14px;
-  color: $text-gray;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}

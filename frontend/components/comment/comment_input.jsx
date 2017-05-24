@@ -31,13 +31,13 @@ class CommentInput extends React.Component {
 
   render() {
     return (
-      <div className="post-detail-add-comment-frame">
+      <div className="comment-add-input-frame">
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.update('body')}
             placeholder="Add a comment..."
             id="comment_input"
             value={this.state.body}
-            className="post-detail-add-comment"></input>
+            className="comment-add-input"></input>
         </form>
       </div>
     );

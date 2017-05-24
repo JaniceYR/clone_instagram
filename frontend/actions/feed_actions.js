@@ -1,7 +1,6 @@
 import * as APIUtil from '../util/feed_api_util';
 
 export const RECEIVE_FEED = "RECEIVE_FEED";
-export const REMOVE_FEED = "REMOVE_FEED";
 
 export const receiveFeed = (feed) => ({
   type: RECEIVE_FEED,

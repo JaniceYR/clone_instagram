@@ -40,8 +40,9 @@ class PostDetail extends React.Component {
               <LikeContainer />
               <CommentButton />
             </div>
-            {`${this.props.postDetail.likes_count} `}
-            likes
+            <h3 className="like-count">
+              {`${this.props.postDetail.likes_count} `} likes
+            </h3>
           </div>
           <CommentInputContainer />
         </div>

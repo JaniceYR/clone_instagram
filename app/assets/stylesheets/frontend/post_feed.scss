@@ -1,0 +1,46 @@
+@import "colors.scss";
+
+.feed-page-ul {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.feed-page-li {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.post-feed-frame {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border: 1px solid $border-gray;
+  margin-bottom: 60px;
+}
+
+.post-feed-user-info-frame {
+  border-bottom: 1px solid $border-gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 27px;
+  padding: 16px;
+}
+
+.post-feed-photo {
+  width: 100%;
+}
+
+.post-feed-bottom-frame {
+  padding: 0 16px;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
