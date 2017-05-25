@@ -1,0 +1,94 @@
+@import "colors.scss";
+
+.feed-welcome-frame {
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $border-gray;
+  width:100%;
+  max-width: 540px;
+  border-radius: 3px;
+  padding: 55px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: $text-gray;
+  text-align: center;
+  font-family: inherit;
+  h2 {
+    font-weight: 600;
+    margin: 30px 0 15px;
+  }
+}
+
+.feed-welcome-icon {
+  background-color: transparent;
+  border: none;
+  height: 47px;
+  width: 55px;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  background-image: image-url('icons.png');
+  background-repeat: no-repeat;
+  background-position: 0 -223px;
+}
+.feed-suggestion-frame {
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $border-gray;
+  width:100%;
+  max-width: 600px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.feed-suggestion-text {
+  width: 100%;
+  font-family: inherit;
+  border-bottom: 1px solid $border-gray;
+}
+.feed-suggestion-text > h2 {
+  margin: 8px 16px;
+  color: $text-light-gray;
+  font-size: 14px;
+  font-weight: 600;
+}
+.feed-suggestion-li {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  border-bottom: 1px solid $border-gray;
+}
+.feed-suggestion-userinfo-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+}
+.feed-suggestion-photo-ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  justify-content: space-between;
+
+  li {
+    width: 32%;
+    height: auto;
+  }
+  li > img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -16,7 +16,7 @@ const UserReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_USERS:
-      return merge({}, action.user);
+      return action.users;
     case RECEIVE_USER:
       return merge({}, action.user);
     case RECEIVE_FOLLOW:

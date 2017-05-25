@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import Navigation from '../navigation/navigation_container';
-import FeedSuggestion from './feed_suggestion';
+import FeedSuggestionContainer from './feed_suggestion_container';
 import PostFeed from '../post/post_feed';
 
 class Feed extends React.Component {
@@ -20,6 +20,7 @@ class Feed extends React.Component {
       return (
         <div >
           <Navigation />
+          <FeedSuggestionContainer />
         </div>
       );
     } else {
