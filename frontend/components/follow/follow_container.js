@@ -5,8 +5,7 @@ import Follow from './follow';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser,
-    user: state.user
+    currentUser: state.session.currentUser
   };
 };
 

@@ -1,4 +1,14 @@
 class Api::UsersController < ApplicationController
+
+  def index
+    @users = User.joins(:followers)
+                .select("users.*, count(follows) as follower_count")
+                .group("users.id")
+                .order("follower_count DESC")
+                .limit(5)
+    render "api/users/index"
+  end
+
   def show
     @user = User.find(params[:id])
     if @user

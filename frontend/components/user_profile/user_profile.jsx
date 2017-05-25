@@ -60,7 +60,7 @@ class UserProfile extends React.Component {
                 <h1>{this.props.user.username}</h1>
 
                 {this.editProfile()}
-                <FollowContainer />
+                <FollowContainer user={this.props.user}/>
               </div>
               <ul className="profile-header-right-2">
                 <li> <h3>{this.props.user.posts_count}</h3>posts</li>

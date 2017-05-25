@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 import Navigation from '../navigation/navigation_container';
+import FeedSuggestion from './feed_suggestion';
 import PostFeed from '../post/post_feed';
 
 class Feed extends React.Component {
@@ -9,25 +10,35 @@ class Feed extends React.Component {
     super(props);
 
   }
+
   componentDidMount() {
     this.props.fetchFeed();
   }
+
   render() {
-    return(
-      <div >
-        <Navigation />
-        <ul className="feed-page-ul">
-          {
-            this.props.feed ? this.props.feed.map((post) =>
-              <li key={`feed-post-${post.id}`} className="feed-page-li">
-                <PostFeed post={post} />
-              </li>
-            )
-            : ""
-          }
-        </ul>
-      </div>
-    );
+    if (this.props.feed.length === 0) {
+      return (
+        <div >
+          <Navigation />
+        </div>
+      );
+    } else {
+      return(
+        <div >
+          <Navigation />
+          <ul className="feed-page-ul">
+            {
+              this.props.feed ? this.props.feed.map((post) =>
+                <li key={`feed-post-${post.id}`} className="feed-page-li">
+                  <PostFeed post={post} />
+                </li>
+              )
+              : ""
+            }
+          </ul>
+        </div>
+      );
+    }
   }
 }
 
