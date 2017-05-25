@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Dropzone from 'react-dropzone';
+import uploadRequest from 'superagent';
 
 import Navigation from '../navigation/navigation_container';
+
+const UPLOAD_PRESET = "appimage";
+const UPLOAD_URL = " https://api.cloudinary.com/v1_1/cloneinstagram/image/upload";
 
 class UserEdit extends React.Component {
   constructor(props){
@@ -14,6 +19,7 @@ class UserEdit extends React.Component {
       profile_pic_url: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handlePhotoDrop = this.handlePhotoDrop.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +29,24 @@ class UserEdit extends React.Component {
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
+    });
+  }
+
+  handlePhotoDrop(photo) {
+    this.handlePhotoUpload(photo[0]);
+  }
+
+  handlePhotoUpload(photo) {
+    let upload = uploadRequest.post(UPLOAD_URL)
+                        .field('upload_preset', UPLOAD_PRESET)
+                        .field('file', photo);
+
+    upload.end((err, response) => {
+      if (response.body.secure_url !== '') {
+        this.setState({
+          profile_pic_url: response.body.secure_url
+        });
+      }
     });
   }
 
@@ -48,8 +72,10 @@ class UserEdit extends React.Component {
             <div className="edit-sub-frame-right">
               <div className="edit-user-username-frame">
                   <div className="edit-user-pic-frame">
-                      <img src={this.props.user.profile_pic_url} className="edit-user-pic"></img>
-
+                    <Dropzone multiple={false} accept="image/*"
+                      onDrop={this.handlePhotoDrop} className="edit-user-pic-button">
+                      <img src={this.state.profile_pic_url} className="edit-user-pic"></img>
+                    </Dropzone>
                   </div>
                   <div>
                     <h1 className="edit-user-username">{this.props.user.username}</h1>
