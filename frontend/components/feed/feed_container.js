@@ -7,7 +7,7 @@ import Feed from './feed';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    feed: values(state.feed)
+    feed: values(state.feed).reverse()
   };
 };
 
