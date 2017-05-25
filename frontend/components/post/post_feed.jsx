@@ -16,10 +16,15 @@ class PostFeed extends React.Component {
     return(
       <div className="post-feed-frame">
         <header className="post-feed-user-info-frame">
-          <img src={this.props.post.user.profile_pic_url}
+          <Link to={`/${this.props.post.user_id}`}>
+            <img src={this.props.post.user.profile_pic_url}
                 className="post-detail-user-info-pic"></img>
+          </Link>
           <div className="post-detail-user-info">
-            <h3 className="post-detail-user-info-username">{this.props.post.user.username}</h3>
+            <Link to={`/${this.props.post.user_id}`}>
+              <h3 className="post-detail-user-info-username">
+                {this.props.post.user.username}</h3>
+            </Link>
             <h3>{this.props.post.location}</h3>
           </div>
         </header>
