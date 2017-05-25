@@ -6,23 +6,11 @@ import FollowContainer from '../follow/follow_container';
 class FeedSuggestion extends React.Component {
   constructor(props){
     super(props);
-    // this.userPosts = this.userPosts.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchUsers();
   }
-  //
-  // userPosts(user) {
-  //   let userPosts = user.letts;
-  //   for (let i = 0; i < 3; i++) {
-  //     if (userPosts[i]) {
-  //       userPosts[i] =
-  //     } else {
-  //       userPosts[i] =
-  //     }
-  //   }
-  // }
 
   render() {
     return (
@@ -43,8 +31,10 @@ class FeedSuggestion extends React.Component {
                   <li key={`suggestions-${user.id}`} className="feed-suggestion-li">
                     <div className="feed-suggestion-userinfo-frame">
                       <div>
-                        <img src={user.profile_pic_url} className="post-detail-user-info-pic"></img>
-                        {user.username}
+                        <Link to={`/${user.id}`}>
+                          <img src={user.profile_pic_url} className="post-detail-user-info-pic"></img>
+                          {user.username}
+                        </Link>
                       </div>
                       <FollowContainer user={user}/>
                     </div>
