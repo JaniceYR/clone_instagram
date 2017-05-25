@@ -64,7 +64,7 @@ class UserProfile extends React.Component {
               </div>
               <ul className="profile-header-right-2">
                 <li> <h3>{this.props.user.posts_count}</h3>posts</li>
-                <li> <h3>{this.props.user.followers_count}</h3>follows</li>
+                <li> <h3>{this.props.user.followers_count}</h3>followers</li>
                 <li> <h3>{this.props.user.followings_count}</h3>following</li>
               </ul>
               <div className="profile-header-right-3">
