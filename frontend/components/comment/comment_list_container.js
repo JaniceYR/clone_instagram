@@ -7,8 +7,7 @@ import CommentList from './comment_list';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUserId: state.session.currentUser.id,
-    postOwnerId: state.posts.user_id
+    currentUserId: state.session.currentUser.id
   };
 };
 

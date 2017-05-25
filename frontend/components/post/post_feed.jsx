@@ -35,6 +35,7 @@ class PostFeed extends React.Component {
           </h3>
           <div className="post-feed-comment-frame">
             <CommentListContainer comments={this.props.post.comments}
+                        postOwnerId={this.props.post.user_id}
                         username={this.props.post.user.username}
                         description={this.props.post.description}/>
           </div>

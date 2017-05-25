@@ -32,6 +32,7 @@ class PostDetail extends React.Component {
           </header>
           <div className="post-detail-comment-frame">
             <CommentListContainer comments={this.props.postDetail.comments}
+                        postOwnerId={this.props.postDetail.user_id}
                         username={this.props.user.username}
                         description={this.props.postDetail.description}/>
           </div>
