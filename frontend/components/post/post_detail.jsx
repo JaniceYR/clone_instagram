@@ -46,7 +46,7 @@ class PostDetail extends React.Component {
             </h3>
           </div>
           <div className="post-datail-comment-input-frame">
-            <CommentInputContainer />
+            <CommentInputContainer postId={this.props.postDetail.id}/>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import LikeContainer from '../like/like_container';
 import CommentButton from '../comment/comment_button';
 import CommentListContainer from '../comment/comment_list_container';
-import CommentInput from '../comment/comment_input';
+import CommentInputContainer from '../comment/comment_input_container';
 
 class PostFeed extends React.Component {
   constructor(props){
@@ -38,7 +38,7 @@ class PostFeed extends React.Component {
                         username={this.props.post.user.username}
                         description={this.props.post.description}/>
           </div>
-          <CommentInput />
+          <CommentInputContainer postId={this.props.post.id}/>
         </div>
       </div>
 

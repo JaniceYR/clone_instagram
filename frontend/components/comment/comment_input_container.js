@@ -6,8 +6,7 @@ import CommentInput from './comment_input';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    userId: state.session.currentUser.id,
-    postId: state.posts.id
+    userId: state.session.currentUser.id
   };
 };
 

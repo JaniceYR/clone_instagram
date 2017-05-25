@@ -21,15 +21,16 @@ const FeedReducer = (state = {}, action) => {
       removeLike[action.like.post_id].likes_count
                     = removeLike[action.like.post_id].likes_count - 1;
       return removeLike;
-    // case RECEIVE_COMMENT:
-    //   let addNewComment = merge({}, state);
-    //   addNewComment.comments.push(action.comment);
-    //   addNewComment.comments_count = state.comments_count + 1;
-    //   return addNewComment;
-    // case REMOVE_COMMENT:
-    //   let removeComment =  merge({}, state);
-    //   removeComment.comments = removeComment.comments.filter( (comment, index) => comment.id !== action.comment.id);
-    //   return removeComment;
+    case RECEIVE_COMMENT:
+      let addNewComment = merge({}, state);
+      addNewComment[action.comment.post_id].comments.push(action.comment);
+      return addNewComment;
+    case REMOVE_COMMENT:
+      let removeComment =  merge({}, state);
+      removeComment[action.comment.post_id].comments
+       = removeComment[action.comment.post_id].comments
+       .filter( (comment, index) => comment.id !== action.comment.id);
+      return removeComment;
 
     default:
       return state;

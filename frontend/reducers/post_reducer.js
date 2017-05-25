@@ -7,11 +7,13 @@ import { RECEIVE_POST,
 import { RECEIVE_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions';
 
-const PostsReducer = (state = {}, action) => {
+let defaultPostState = {
+  comments: []
+};
+
+const PostsReducer = (state = defaultPostState, action) => {
   Object.freeze(state);
   switch(action.type) {
-    // case RECEIVE_POSTS:
-    //   return merge({}, action.posts);
     case RECEIVE_POST:
       return merge({}, action.post);
     case REMOVE_POST:
@@ -31,7 +33,8 @@ const PostsReducer = (state = {}, action) => {
       return addNewComment;
     case REMOVE_COMMENT:
       let removeComment =  merge({}, state);
-      removeComment.comments = removeComment.comments.filter( (comment, index) => comment.id !== action.comment.id);
+      removeComment.comments = removeComment.comments.filter( 
+                (comment, index) => comment.id !== action.comment.id);
       return removeComment;
     default:
       return state;
