@@ -1,8 +1,7 @@
 # CloneInstagram
 
-[Heroku link](https://clone-stagram.herokuapp.com/#/)
+[Clone-Instagram](https://clone-stagram.herokuapp.com/#/)
 
-[Trello Link](https://trello.com/b/k0t03Fw5/cloneinstagram)
 
 ## Minimum Viable Product
 
