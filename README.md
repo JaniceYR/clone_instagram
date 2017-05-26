@@ -11,7 +11,8 @@ It was built using Ruby on Rails backend with PostgreSQL database and a React/Re
 Clone-Instagram was designed and built in two weeks.
 The original [proposal](https://github.com/JaniceYR/clone_instagram/blob/master/docs/README.md) included:
 * [Wireframes](https://github.com/JaniceYR/clone_instagram/tree/master/docs/wireframes)
-- Wireframe example
+
+Wireframe example
 ![wireframe_user_profile_page](https://github.com/JaniceYR/clone_instagram/blob/master/docs/wireframes/user_profile_page.png)
 * [React Components Hierarchy](https://github.com/JaniceYR/clone_instagram/blob/master/docs/component-hierarchy.md)
 * [DB schema](https://github.com/JaniceYR/clone_instagram/blob/master/docs/schema.md)
