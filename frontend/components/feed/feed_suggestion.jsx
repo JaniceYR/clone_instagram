@@ -26,7 +26,7 @@ class FeedSuggestion extends React.Component {
           </div>
           <ul>
             {
-              this.props.suggestions ? this.props.suggestions.map((user) => {
+              this.props.suggestions.length > 0 ? this.props.suggestions.map((user) => {
                 return (
                   <li key={`suggestions-${user.id}`} className="feed-suggestion-li">
                     <div className="feed-suggestion-userinfo-frame">

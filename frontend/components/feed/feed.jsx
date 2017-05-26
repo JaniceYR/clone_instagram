@@ -8,7 +8,6 @@ import PostFeed from '../post/post_feed';
 class Feed extends React.Component {
   constructor(props){
     super(props);
-
   }
 
   componentDidMount() {

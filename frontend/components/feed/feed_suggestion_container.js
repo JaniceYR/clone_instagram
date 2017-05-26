@@ -6,9 +6,9 @@ import { fetchUsers } from "../../actions/user_actions";
 import FeedSuggestion from './feed_suggestion';
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    suggestions: state.user.users
-  };
+  return ({
+    suggestions: values(state.suggestions)
+  });
 };
 
 const mapDispatchToProps = (dispatch) => ({
