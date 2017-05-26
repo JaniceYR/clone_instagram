@@ -1,16 +1,18 @@
 # CloneInstagram
 
 [Clone-Instagram](https://clone-stagram.herokuapp.com/#/) is a web application inspired by Instagram for following the other users and sharing pictures.
-
 It was built using Ruby on Rails backend with PostgreSQL database and a React/Redux frontend.
 
 ## Features & Implementation
-![suggestion]
+* User can Signup or Signin with secure authentication
+### Suggestions
+![suggestion](https://github.com/JaniceYR/clone_instagram/blob/master/docs/features/suggestion.png)
 ## Project Design
 Clone-Instagram was designed and built in two weeks.
-
 The original [proposal](https://github.com/JaniceYR/clone_instagram/blob/master/docs/README.md) included:
 * [Wireframes](https://github.com/JaniceYR/clone_instagram/tree/master/docs/wireframes)
+- Wireframe example
+![wireframe_user_profile_page](https://github.com/JaniceYR/clone_instagram/blob/master/docs/wireframes/user_profile_page.png)
 * [React Components Hierarchy](https://github.com/JaniceYR/clone_instagram/blob/master/docs/component-hierarchy.md)
 * [DB schema](https://github.com/JaniceYR/clone_instagram/blob/master/docs/schema.md)
 
