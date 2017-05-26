@@ -41,18 +41,24 @@ class FeedSuggestion extends React.Component {
                     <ul className="feed-suggestion-photo-ul">
                       <li>
                         { user.posts[0] ?
-                          <img src={user.posts[0].photo_url}></img>
-                        : ""}
+                          <div>
+                            <img src={user.posts[0].photo_url}></img>
+                          </div>
+                        : <div></div>}
                       </li>
                       <li>
                         { user.posts[1] ?
-                          <img src={user.posts[1].photo_url}></img>
-                        : ""}
+                          <div>
+                            <img src={user.posts[1].photo_url}></img>
+                          </div>
+                        : <div></div>}
                       </li>
                       <li>
                         { user.posts[2] ?
-                          <img src={user.posts[2].photo_url}></img>
-                        : ""}
+                          <div>
+                            <img src={user.posts[2].photo_url}></img>
+                          </div>
+                        : <div></div>}
                       </li>
 
                     </ul>
