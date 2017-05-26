@@ -10,11 +10,15 @@ const SuggestionReducer = (state = {}, action) => {
       return action.users;
     case RECEIVE_FOLLOW:
       let addFollow = merge({}, state);
-      addFollow[action.follow.following_id].followed = true;
+      if( addFollow[action.follow.following_id]) {
+        addFollow[action.follow.following_id].followed = true;
+      }
       return addFollow;
     case REMOVE_FOLLOW:
       let removeFollow = merge({}, state);
-      removeFollow[action.follow.following_id].followed = false;
+      if( removeFollow[action.follow.following_id] ) {
+        removeFollow[action.follow.following_id].followed = false;
+      }
       return removeFollow;
     default:
       return state;
